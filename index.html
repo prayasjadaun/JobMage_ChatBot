@@ -6,7 +6,7 @@
     <title>Jobmage Bot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-                body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
@@ -17,9 +17,9 @@
             overflow: hidden;
         }
         .chat-container {
-            width: 95vw;
+            width: 90vw;
             max-width: 450px;
-            height: 90vh;
+            height: 85vh;
             max-height: 700px;
             border: 1px solid #ccc;
             border-radius: 20px;
@@ -108,7 +108,6 @@
             border-radius: 20px;
             margin-right: 10px;
             transition: box-shadow 0.3s ease;
-            font-size: 16px;
         }
         .chat-input:focus {
             box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
@@ -122,45 +121,10 @@
             border-radius: 20px;
             cursor: pointer;
             transition: background 0.3s ease;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .send-btn:hover {
             background: #005bb5;
         }
-        @media (max-width: 600px) {
-            .chat-container {
-                width: 100vw;
-                height: 100vh;
-                border-radius: 0;
-            }
-            .chat-input-container {
-                flex-direction: column;
-                padding: 5px;
-            }
-            .chat-input {
-                margin: 0 0 10px 0;
-            }
-            .send-btn {
-                width: 100%;
-                padding: 10px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <i class="fas fa-robot icon"></i> Chatbot
-        </div>
-        <div class="chat-box" id="chat-box"></div>
-        <div class="chat-input-container">
-            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message here...">
-            <button class="send-btn" id="send-btn">Send</button>
-        
-
     </style>
 </head>
 <body>
