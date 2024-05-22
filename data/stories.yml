@@ -1,0 +1,833 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  # -----------------------------------------------
+
+  # ----------------------START---------------------------------
+  - story: software_development
+    steps:
+      - intent: software_development
+      - action: utter_software_development
+
+  - story: Product Manager Role
+    steps:
+      - intent: ask_about_product_manager
+      - action: utter_ask_about_product_manager
+
+  - story: ask about role responsibilities
+    steps:
+      - intent: ask_role_responsibilities
+      - action: utter_ask_role_responsibilities
+
+  - story: ask about stakeholder management
+    steps:
+      - intent: ask_stakeholder_management
+      - action: utter_ask_stakeholder_management
+
+  - story: ask about market research
+    steps:
+      - intent: ask_market_research
+      - action: utter_ask_market_research
+
+  - story: ask about product strategy
+    steps:
+      - intent: ask_product_strategy
+      - action: utter_ask_product_strategy
+
+  - story: ask about roadmap creation
+    steps:
+      - intent: ask_roadmap_creation
+      - action: utter_ask_roadmap_creation
+
+  - story: ask about agile methodology
+    steps:
+      - intent: ask_agile_methodology
+      - action: utter_ask_agile_methodology
+
+  - story: ask about user testing
+    steps:
+      - intent: ask_user_testing
+      - action: utter_ask_user_testing
+
+  - story: ask about go to market strategy
+    steps:
+      - intent: ask_go_to_market_strategy
+      - action: utter_ask_go_to_market_strategy
+
+  - story: ask about post launch activities
+    steps:
+      - intent: ask_post_launch_activities
+      - action: utter_ask_post_launch_activities
+
+  - story: ask about long term strategy
+    steps:
+      - intent: ask_long_term_strategy
+      - action: utter_ask_long_term_strategy
+
+  - story: ask about tools and techniques
+    steps:
+      - intent: ask_tools_and_techniques
+      - action: utter_ask_tools_and_techniques
+
+  - story: ask about skills development
+    steps:
+      - intent: ask_skills_development
+      - action: utter_ask_skills_development
+
+  - story: ask miscellaneous questions
+    steps:
+      - intent: ask_miscellaneous
+      - action: utter_ask_miscellaneous
+# -------------------------------------------------------------------------------
+  - story: Project Manager Role
+    steps:
+      - intent: ask_about_project_manager
+      - action: utter_ask_about_project_manager
+
+  - story: ask about project manager role
+    steps:
+    - intent: ask_about_project_manager_role
+    - action: utter_ask_about_project_manager_role
+
+  - story: ask about project management skills
+    steps:
+    - intent: ask_about_project_management_skills
+    - action: utter_ask_about_project_management_skills
+
+  - story: ask about project management methodologies
+    steps:
+    - intent: ask_about_project_management_methodologies
+    - action: utter_ask_about_project_management_methodologies
+
+  - story: ask about project management tools
+    steps:
+    - intent: ask_about_project_management_tools
+    - action: utter_ask_about_project_management_tools
+
+  - story: ask about project management certifications
+    steps:
+    - intent: ask_about_project_management_certifications
+    - action: utter_ask_about_project_management_certifications
+
+  - story: ask about project risk management
+    steps:
+    - intent: ask_about_project_risk_management
+    - action: utter_ask_about_project_risk_management
+
+  - story: ask about project quality management
+    steps:
+    - intent: ask_about_project_quality_management
+    - action: utter_ask_about_project_quality_management
+
+  - story: ask about project stakeholder management
+    steps:
+    - intent: ask_about_project_stakeholder_management
+    - action: utter_ask_about_project_stakeholder_management
+
+
+# -------------------------------------------------------------
+
+  - story: explain UX Designer role
+    steps:
+      - intent: ask_about_ux_designer
+      - action: utter_ux_designer_role
+
+  - story: explain UX Designer skills
+    steps:
+      - intent: ask_ux_designer_skills
+      - action: utter_ux_designer_skills
+
+  - story: explain UX Designer roadmap
+    steps:
+      - intent: ask_ux_designer_roadmap
+      - action: utter_ux_designer_roadmap
+
+  - story: explain technical skills for UX Designer
+    steps:
+      - intent: ask_ux_technical_skills
+      - action: utter_ux_technical_skills
+
+  - story: explain soft skills for UX Designer
+    steps:
+      - intent: ask_ux_soft_skills
+      - action: utter_ux_soft_skills
+
+  - story: explain additional skills for UX Designer
+    steps:
+      - intent: ask_ux_additional_skills
+      - action: utter_ux_additional_skills
+
+  - story: explain user research
+    steps:
+      - intent: ask_user_research
+      - action: utter_user_research
+
+  - story: explain prototyping
+    steps:
+      - intent: ask_prototyping
+      - action: utter_prototyping
+
+  - story: explain visual design
+    steps:
+      - intent: ask_visual_design
+      - action: utter_visual_design
+
+  - story: explain usability testing
+    steps:
+      - intent: ask_usability_testing
+      - action: utter_usability_testing
+
+  - story: explain information architecture
+    steps:
+      - intent: ask_information_architecture
+      - action: utter_information_architecture
+
+  - story: explain portfolio importance
+    steps:
+      - intent: ask_portfolio
+      - action: utter_portfolio
+
+  - story: explain QA Tester role
+    steps:
+      - intent: ask_about_qa_tester
+      - action: utter_qa_tester_role
+
+  - story: explain QA Tester skills
+    steps:
+      - intent: ask_qa_tester_skills
+      - action: utter_qa_tester_skills
+
+  - story: explain QA Tester roadmap
+    steps:
+      - intent: ask_qa_tester_roadmap
+      - action: utter_qa_tester_roadmap
+
+  - story: explain technical skills for QA Tester
+    steps:
+      - intent: ask_qa_technical_skills
+      - action: utter_qa_technical_skills
+
+  - story: explain soft skills for QA Tester
+    steps:
+      - intent: ask_qa_soft_skills
+      - action: utter_qa_soft_skills
+
+  - story: explain additional skills for QA Tester
+    steps:
+      - intent: ask_qa_additional_skills
+      - action: utter_qa_additional_skills
+
+  - story: explain manual testing
+    steps:
+      - intent: ask_manual_testing
+      - action: utter_manual_testing
+
+  - story: explain automation testing
+    steps:
+      - intent: ask_automation_testing
+      - action: utter_automation_testing
+
+  - story: explain performance testing
+    steps:
+      - intent: ask_performance_testing
+      - action: utter_performance_testing
+
+  - story: explain API testing
+    steps:
+      - intent: ask_api_testing
+      - action: utter_api_testing
+
+  - story: explain defect tracking
+    steps:
+      - intent: ask_defect_tracking
+      - action: utter_defect_tracking
+
+  - story: explain SQL skills
+    steps:
+      - intent: ask_sql_skills
+      - action: utter_sql_skills
+
+  - story: explain version control
+    steps:
+      - intent: ask_version_control
+      - action: utter_version_control
+
+  - story: explain QA certifications
+    steps:
+      - intent: ask_qa_certifications
+      - action: utter_qa_certifications
+
+  - story: explain QA education
+    steps:
+      - intent: ask_qa_education
+      - action: utter_qa_education
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - story: UI Designer Role
+    steps:
+      - intent: ask_about_ui_designer
+      - action: utter_ask_about_ui_designer
+
+  - story: Technical Writer Role
+    steps:
+      - intent: ask_about_technical_writer
+      - action: utter_ask_about_technical_writer
+
+  - story: Scrum Master Role
+    steps:
+      - intent: ask_about_scrum_master
+      - action: utter_ask_about_scrum_master
+
+  - story: Business Analyst Role
+    steps:
+      - intent: ask_about_business_analyst
+      - action: utter_ask_about_business_analyst
+
+  - story: Systems Analyst Role
+    steps:
+      - intent: ask_about_systems_analyst
+      - action: utter_ask_about_systems_analyst
+
+  - story: Product Owner Role
+    steps:
+      - intent: ask_about_product_owner
+      - action: utter_ask_about_product_owner
+  # ---------------END-----------------------------------------------
+  # -----------START----------------------------------------------
+  - story: ai_ml
+    steps:
+      - intent: ai_ml
+      - action: utter_ai_ml
+
+  - story: Machine Learning Engineer Role
+    steps:
+      - intent: ask_about_ml_engineer
+      - action: utter_ask_about_ml_engineer
+
+  - story: AI Research Scientist Role
+    steps:
+      - intent: ask_about_ai_research_scientist
+      - action: utter_ask_about_ai_research_scientist
+
+  - story: AI/ML Solutions Architect Role
+    steps:
+      - intent: ask_about_ml_solutions_architect
+      - action: utter_ask_about_ml_solutions_architect
+
+  - story: AI/ML Product Manager Role
+    steps:
+      - intent: ask_about_ai_product_manager
+      - action: utter_ask_about_ai_product_manager
+
+  - story: AI Research Engineer Role
+    steps:
+      - intent: ask_about_ai_research_engineer
+      - action: utter_ask_about_ai_research_engineer
+
+  - story: Deep Learning Engineer Role
+    steps:
+      - intent: ask_about_deep_learning_engineer
+      - action: utter_ask_about_deep_learning_engineer
+
+  - story: Computer Vision Engineer Role
+    steps:
+      - intent: ask_about_computer_vision_engineer
+      - action: utter_ask_about_computer_vision_engineer
+
+  - story: NLP Engineer Role
+    steps:
+      - intent: ask_about_nlp_engineer
+      - action: utter_ask_about_nlp_engineer
+
+  - story: AI/ML Operations Engineer Role
+    steps:
+      - intent: ask_about_ai_ops_engineer
+      - action: utter_ask_about_ai_ops_engineer
+  # -----------END------------------------------------------------
+
+  - story: cybersecurity
+    steps:
+      - intent: cybersecurity
+      - action: utter_cybersecurity
+
+  - story: Security Analyst Role
+    steps:
+      - intent: ask_about_security_analyst
+      - action: utter_ask_about_security_analyst
+
+  - story: Penetration Tester Role
+    steps:
+      - intent: ask_about_penetration_tester
+      - action: utter_ask_about_penetration_tester
+
+  - story: Security Engineer Role
+    steps:
+      - intent: ask_about_security_engineer
+      - action: utter_ask_about_security_engineer
+
+  - story: Incident Responder Role
+    steps:
+      - intent: ask_about_incident_responder
+      - action: utter_ask_about_incident_responder
+
+  - story: Security Consultant Role
+    steps:
+      - intent: ask_about_security_consultant
+      - action: utter_ask_about_security_consultant
+
+  - story: Security Architect Role
+    steps:
+      - intent: ask_about_security_architect
+      - action: utter_ask_about_security_architect
+
+  - story: CISO Role
+    steps:
+      - intent: ask_about_ciso
+      - action: utter_ask_about_ciso
+
+  - story: Forensic Analyst Role
+    steps:
+      - intent: ask_about_forensic_analyst
+      - action: utter_ask_about_forensic_analyst
+
+  - story: SOC Analyst Role
+    steps:
+      - intent: ask_about_soc_analyst
+      - action: utter_ask_about_soc_analyst
+
+  - story: Security Compliance Analyst Role
+    steps:
+      - intent: ask_about_security_compliance_analyst
+      - action: utter_ask_about_security_compliance_analyst
+
+  # ----------------------------------------------------------------
+
+  - story: data_science_bigdata
+    steps:
+      - intent: data_science_bigdata
+      - action: utter_data_science_bigdata
+
+  - story: Data Scientist Role
+    steps:
+      - intent: ask_about_data_scientist
+      - action: utter_ask_about_data_scientist
+
+  - story: Big Data Engineer Role
+    steps:
+      - intent: ask_about_big_data_engineer
+      - action: utter_ask_about_big_data_engineer
+
+  - story: Data Analyst Role
+    steps:
+      - intent: ask_about_data_analyst
+      - action: utter_ask_about_data_analyst
+
+  - story: Machine Learning Engineer Role
+    steps:
+      - intent: ask_about_machine_learning_engineer
+      - action: utter_ask_about_machine_learning_engineer
+
+  - story: Data Architect Role
+    steps:
+      - intent: ask_about_data_architect
+      - action: utter_ask_about_data_architect
+
+  - story: BI Analyst Role
+    steps:
+      - intent: ask_about_bi_analyst
+      - action: utter_ask_about_bi_analyst
+
+  - story: Data Engineer Role
+    steps:
+      - intent: ask_about_data_engineer
+      - action: utter_ask_about_data_engineer
+
+  - story: Data Mining Engineer Role
+    steps:
+      - intent: ask_about_data_mining_engineer
+      - action: utter_ask_about_data_mining_engineer
+
+  - story: Quantitative Analyst Role
+    steps:
+      - intent: ask_about_quantitative_analyst
+      - action: utter_ask_about_quantitative_analyst
+
+  - story: Data Visualization Specialist Role
+    steps:
+      - intent: ask_about_data_visualization_specialist
+      - action: utter_ask_about_data_visualization_specialist
+
+  # ----------------------------------------------------------
+
+  - story: cloud_computing
+    steps:
+      - intent: cloud_computing
+      - action: utter_cloud_computing
+
+  - story: Cloud Solutions Architect Role
+    steps:
+      - intent: ask_about_cloud_solutions_architect
+      - action: utter_ask_about_cloud_solutions_architect
+
+  - story: Cloud Engineer Role
+    steps:
+      - intent: ask_about_cloud_engineers
+      - action: utter_ask_about_cloud_engineer
+
+  - story: Cloud Consultant Role
+    steps:
+      - intent: ask_about_cloud_consultant
+      - action: utter_ask_about_cloud_consultant
+
+  - story: Cloud Administrator Role
+    steps:
+      - intent: ask_about_cloud_administrator
+      - action: utter_ask_about_cloud_administrator
+
+  - story: DevOps Engineer Role
+    steps:
+      - intent: ask_about_devops_engineer
+      - action: utter_ask_about_devops_engineer
+
+  - story: Cloud Security Engineer Role
+    steps:
+      - intent: ask_about_cloud_security_engineer
+      - action: utter_ask_about_cloud_security_engineer
+
+  - story: Cloud Data Engineer Role
+    steps:
+      - intent: ask_about_cloud_data_engineer
+      - action: utter_ask_about_cloud_data_engineer
+
+  - story: Cloud Operations Engineer Role
+    steps:
+      - intent: ask_about_cloud_operations_engineer
+      - action: utter_ask_about_cloud_operations_engineer
+
+  - story: Cloud Developer Role
+    steps:
+      - intent: ask_about_cloud_developer
+      - action: utter_ask_about_cloud_developer
+
+  # ---------------------------------------------------------------------------------
+
+  - story: mobile_app_development
+    steps:
+      - intent: mobile_app_development
+      - action: utter_mobile_app_development
+
+  - story: Mobile App Developer Role
+    steps:
+      - intent: ask_about_mobile_app_developer
+      - action: utter_ask_about_mobile_app_developer
+
+  - story: iOS Developer Role
+    steps:
+      - intent: ask_about_ios_developer
+      - action: utter_ask_about_ios_developer
+
+  - story: Android Developer Role
+    steps:
+      - intent: ask_about_android_developer
+      - action: utter_ask_about_android_developer
+
+  - story: Mobile App Architect Role
+    steps:
+      - intent: ask_about_mobile_app_architect
+      - action: utter_ask_about_mobile_app_architect
+
+  - story: Mobile App UI/UX Designer Role
+    steps:
+      - intent: ask_about_mobile_app_ui_ux_designer
+      - action: utter_ask_about_mobile_app_ui_ux_designer
+
+  - story: Mobile App Tester Role
+    steps:
+      - intent: ask_about_mobile_app_tester
+      - action: utter_ask_about_mobile_app_tester
+
+  - story: Mobile App Product Manager Role
+    steps:
+      - intent: ask_about_mobile_app_product_manager
+      - action: utter_ask_about_mobile_app_product_manager
+
+  - story: Mobile App Project Manager Role
+    steps:
+      - intent: ask_about_mobile_app_project_manager
+      - action: utter_ask_about_mobile_app_project_manager
+
+  - story: Mobile App Marketing Specialist Role
+    steps:
+      - intent: ask_about_mobile_app_marketing_specialist
+      - action: utter_ask_about_mobile_app_marketing_specialist
+
+  - story: Mobile App Support Engineer Role
+    steps:
+      - intent: ask_about_mobile_app_support_engineer
+      - action: utter_ask_about_mobile_app_support_engineer
+
+  # -----------------------------------------------------------------
+
+  - story: web_development
+    steps:
+      - intent: web_development
+      - action: utter_web_development
+
+  - story: Frontend Developer Role
+    steps:
+      - intent: ask_about_frontend_developer
+      - action: utter_ask_about_frontend_developer
+
+  - story: Backend Developer Role
+    steps:
+      - intent: ask_about_backend_developer
+      - action: utter_ask_about_backend_developer
+
+  - story: Full-stack Developer Role
+    steps:
+      - intent: ask_about_fullstack_developer
+      - action: utter_ask_about_fullstack_developer
+
+  - story: Web Designer Role
+    steps:
+      - intent: ask_about_web_designer
+      - action: utter_ask_about_web_designer
+
+  - story: UI/UX Designer Role
+    steps:
+      - intent: ask_about_uiux_designer
+      - action: utter_ask_about_uiux_designer
+
+  - story: Web Developer Role
+    steps:
+      - intent: ask_about_web_developer
+      - action: utter_ask_about_web_developer
+
+  - story: Web Architect Role
+    steps:
+      - intent: ask_about_web_architect
+      - action: utter_ask_about_web_architect
+
+  - story: Web Project Manager Role
+    steps:
+      - intent: ask_about_web_project_manager
+      - action: utter_ask_about_web_project_manager
+
+  - story: Web QA Engineer Role
+    steps:
+      - intent: ask_about_web_qa_engineer
+      - action: utter_ask_about_web_qa_engineer
+
+  - story: Web Content Manager Role
+    steps:
+      - intent: ask_about_web_content_manager
+      - action: utter_ask_about_web_content_manager
+
+  # -------------------------------------------------------------------
+
+  - story: database_management
+    steps:
+      - intent: database_management
+      - action: utter_database_management
+
+  - story: Database Administrator Role
+    steps:
+      - intent: ask_about_dba
+      - action: utter_ask_about_dba
+
+  - story: Database Developer Role
+    steps:
+      - intent: ask_about_database_developer
+      - action: utter_ask_about_database_developer
+
+  - story: Database Analyst Role
+    steps:
+      - intent: ask_about_database_analyst
+      - action: utter_ask_about_database_analyst
+
+  - story: Data Engineer Role
+    steps:
+      - intent: ask_about_data_engineers
+      - action: utter_ask_about_data_engineers
+
+  - story: Data Warehouse Manager Role
+    steps:
+      - intent: ask_about_data_warehouse_manager
+      - action: utter_ask_about_data_warehouse_manager
+
+  - story: Database Security Specialist Role
+    steps:
+      - intent: ask_about_database_security_specialist
+      - action: utter_ask_about_database_security_specialist
+
+  - story: Database Performance Analyst Role
+    steps:
+      - intent: ask_about_database_performance_analyst
+      - action: utter_ask_about_database_performance_analyst
+
+  - story: Database Consultant Role
+    steps:
+      - intent: ask_about_database_consultant
+      - action: utter_ask_about_database_consultant
+
+  - story: Data Governance Manager Role
+    steps:
+      - intent: ask_about_data_governance_manager
+      - action: utter_ask_about_data_governance_manager
+
+  # --------------------------------------------------------------------------
+
+  - story: networking
+    steps:
+      - intent: networking
+      - action: utter_networking
+
+  - story: Network Engineer Role
+    steps:
+      - intent: ask_about_network_engineer
+      - action: utter_ask_about_network_engineer
+
+  - story: Network Administrator Role
+    steps:
+      - intent: ask_about_network_administrator
+      - action: utter_ask_about_network_administrator
+
+  - story: Network Security Engineer Role
+    steps:
+      - intent: ask_about_network_security_engineer
+      - action: utter_ask_about_network_security_engineer
+
+  - story: Systems Administrator Role
+    steps:
+      - intent: ask_about_systems_administrator
+      - action: utter_ask_about_systems_administrator
+
+  - story: Network Architect Role
+    steps:
+      - intent: ask_about_network_architect
+      - action: utter_ask_about_network_architect
+
+  - story: Network Analyst Role
+    steps:
+      - intent: ask_about_network_analyst
+      - action: utter_ask_about_network_analyst
+
+  - story: NOC Technician Role
+    steps:
+      - intent: ask_about_noc_technician
+      - action: utter_ask_about_noc_technician
+
+  - story: Wireless Network Engineer Role
+    steps:
+      - intent: ask_about_wireless_network_engineer
+      - action: utter_ask_about_wireless_network_engineer
+
+  - story: Cloud Network Engineer Role
+    steps:
+      - intent: ask_about_cloud_network_engineer
+      - action: utter_ask_about_cloud_network_engineer
+
+  - story: Network Support Specialist Role
+    steps:
+      - intent: ask_about_network_support_specialist
+      - action: utter_ask_about_network_support_specialist
+
+  # --------------------------------------------------------------------------------
+
+  - story: embedded_systems
+    steps:
+      - intent: embedded_systems
+      - action: utter_embedded_systems
+
+  - story: Embedded Systems Engineer Role
+    steps:
+      - intent: ask_about_embedded_systems_engineer
+      - action: utter_ask_about_embedded_systems_engineer
+
+  - story: Firmware Engineer Role
+    steps:
+      - intent: ask_about_firmware_engineer
+      - action: utter_ask_about_firmware_engineer
+
+  - story: Embedded Software Developer Role
+    steps:
+      - intent: ask_about_embedded_software_developer
+      - action: utter_ask_about_embedded_software_developer
+
+  - story: Hardware Engineer Role
+    steps:
+      - intent: ask_about_hardware_engineer
+      - action: utter_ask_about_hardware_engineer
+
+  - story: Embedded Systems Architect Role
+    steps:
+      - intent: ask_about_embedded_systems_architect
+      - action: utter_ask_about_embedded_systems_architect
+
+  - story: Embedded Systems Tester Role
+    steps:
+      - intent: ask_about_embedded_systems_tester
+      - action: utter_ask_about_embedded_systems_tester
+
+  - story: System Integration Engineer Role
+    steps:
+      - intent: ask_about_system_integration_engineer
+      - action: utter_ask_about_system_integration_engineer
+
+  - story: Real-Time Systems Engineer Role
+    steps:
+      - intent: ask_about_real_time_systems_engineer
+      - action: utter_ask_about_real_time_systems_engineer
+
+  - story: Embedded Systems Project Manager Role
+    steps:
+      - intent: ask_about_embedded_systems_project_manager
+      - action: utter_ask_about_embedded_systems_project_manager
+
+  - story: Embedded Systems Consultant Role
+    steps:
+      - intent: ask_about_embedded_systems_consultant
+      - action: utter_ask_about_embedded_systems_consultant

@@ -1,0 +1,1108 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  # ------------------------------------------
+
+  # -------START------------------------------------
+  - intent: software_development
+    examples: |
+      - What are the typical job roles and skills required in software development?
+      - Tell me about software development job roles.
+      - What skills are necessary for software engineers?
+
+  - intent: ask_about_product_manager
+    examples: |
+      - What does a Product Manager do?
+      - Explain the role of a Product Manager.
+      - What are the responsibilities of a Product Manager?
+
+    
+  - intent: ask_role_responsibilities
+    examples: |
+      - What are the responsibilities of a Product Manager?
+      - Tell me about the core responsibilities of a PM.
+      - What does a Product Manager do?
+      - Explain the role of a Product Manager.
+
+  - intent: ask_stakeholder_management
+    examples: |
+      - How should a Product Manager handle stakeholders?
+      - What are the best practices for stakeholder management?
+      - Tips for managing stakeholders as a PM?
+      - How to collaborate with cross-functional teams?
+
+  - intent: ask_market_research
+    examples: |
+      - How do you conduct market research?
+      - What's involved in market research for a PM?
+      - Steps for market research in product management?
+      - How to analyze market trends and customer needs?
+
+  - intent: ask_product_strategy
+    examples: |
+      - How do you develop a product strategy?
+      - What are the key components of a product strategy?
+      - Steps to create a product vision and strategy?
+      - How to align product strategy with company goals?
+
+  - intent: ask_roadmap_creation
+    examples: |
+      - How do you create a product roadmap?
+      - What's the process for roadmap development?
+      - Tips for prioritizing features in a roadmap?
+      - How to set realistic milestones and timelines?
+
+  - intent: ask_agile_methodology
+    examples: |
+      - What is Agile methodology?
+      - How does Agile work in product development?
+      - Explain Scrum and Kanban practices.
+      - How to implement Agile as a Product Manager?
+
+  - intent: ask_user_testing
+    examples: |
+      - How do you conduct user testing?
+      - What's involved in usability testing?
+      - Steps for gathering user feedback through testing?
+      - How to integrate user feedback into the product?
+
+  - intent: ask_go_to_market_strategy
+    examples: |
+      - How do you prepare for a product launch?
+      - What's involved in a go-to-market strategy?
+      - Steps for planning a product launch?
+      - How to collaborate with marketing and sales for a launch?
+
+  - intent: ask_post_launch_activities
+    examples: |
+      - What activities are involved post-launch?
+      - How do you monitor product performance after launch?
+      - Steps for gathering and analyzing post-launch feedback?
+      - How to plan continuous improvements for the product?
+
+  - intent: ask_long_term_strategy
+    examples: |
+      - How do you plan for long-term product growth?
+      - What's involved in product expansion?
+      - How to stay updated with market trends?
+      - Strategies for fostering innovation in product management?
+
+  - intent: ask_tools_and_techniques
+    examples: |
+      - What tools are used in product management?
+      - Recommended tools for project management?
+      - Best tools for design and prototyping?
+      - Tools for analytics and user feedback?
+
+  - intent: ask_skills_development
+    examples: |
+      - What skills are needed for a Product Manager?
+      - How to develop technical understanding as a PM?
+      - Tips for improving business acumen?
+      - How to enhance communication and leadership skills?
+
+  - intent: ask_miscellaneous
+    examples: |
+      - Can you tell me more about the role of a PM?
+      - What are some challenges faced by Product Managers?
+      - How to handle competing priorities in product management?
+      - What's the career path for a Product Manager?
+
+
+
+
+
+  - intent: ask_about_project_manager
+    examples: |
+      - Can you tell me about the role of a Project Manager?
+      - What does a Project Manager typically do?
+      - Explain the responsibilities of a Project Manager.
+  - intent: ask_about_project_manager_role
+    examples: |
+      - What is the role of a Project Manager?
+      - Can you explain the responsibilities of a Project Manager?
+      - What does a Project Manager do?
+      - Describe the role of a PM
+      - What are the duties of a Project Manager?
+
+  - intent: ask_about_project_management_skills
+    examples: |
+      - What skills are required for project management?
+      - Can you tell me about the skills needed for project management?
+      - What skills should a Project Manager have?
+      - Describe the skills roadmap for project managers
+      - What are the key skills for a Project Manager?
+
+  - intent: ask_about_project_management_methodologies
+    examples: |
+      - What are the different project management methodologies?
+      - Explain Agile project management
+      - Can you tell me about Waterfall methodology?
+      - What is the Hybrid approach in project management?
+      - Describe common project management frameworks
+
+  - intent: ask_about_project_management_tools
+    examples: |
+      - What tools are used in project management?
+      - Can you recommend project management software?
+      - Explain popular project management tools like JIRA and Trello
+      - What are some collaboration tools for project management?
+      - Describe tools for project scheduling and task management
+
+  - intent: ask_about_project_management_certifications
+    examples: |
+      - What certifications are available for project managers?
+      - Can you recommend project management certifications?
+      - Explain the PMP certification
+      - What is PRINCE2 certification?
+      - Describe Agile certifications like CSM and PMI-ACP
+
+  - intent: ask_about_project_risk_management
+    examples: |
+      - What is risk management in project management?
+      - Explain the importance of risk management in projects
+      - Can you describe risk identification techniques?
+      - What are some strategies for project risk mitigation?
+      - Describe risk response planning in project management
+
+  - intent: ask_about_project_quality_management
+    examples: |
+      - What is quality management in project management?
+      - Explain the importance of quality assurance in projects
+      - Can you describe quality control processes?
+      - What are some techniques for project quality improvement?
+      - Describe quality audits in project management
+
+  - intent: ask_about_project_stakeholder_management
+    examples: |
+      - What is stakeholder management in project management?
+      - Explain the role of stakeholders in projects
+      - Can you describe stakeholder engagement techniques?
+      - What are some strategies for managing project stakeholders?
+      - Describe effective communication with project stakeholders
+
+
+  - intent: ask_about_ux_designer
+    examples: |
+      - Can you tell me about the role of a User Experience Designer?
+      - What does a UX Designer do?
+      - Explain the responsibilities of a UX Designer.
+
+  - intent: ask_ux_designer_skills
+    examples: |
+      - What skills does a UX Designer need?
+      - Tell me the skills required for a UX Designer.
+      - What abilities are important for a UX Designer?
+      - What do I need to learn to be a UX Designer?
+
+  - intent: ask_ux_designer_roadmap
+    examples: |
+      - How can I become a UX Designer?
+      - What's the roadmap to becoming a UX Designer?
+      - What steps should I take to be a UX Designer?
+      - Can you guide me on how to become a UX Designer?
+
+  - intent: ask_ux_technical_skills
+    examples: |
+      - What technical skills does a UX Designer need?
+      - Tell me about the technical skills required for a UX Designer.
+      - What software do UX Designers use?
+      - What tools should I learn as a UX Designer?
+
+  - intent: ask_ux_soft_skills
+    examples: |
+      - What soft skills are important for a UX Designer?
+      - What interpersonal skills do I need to be a UX Designer?
+      - Tell me about the soft skills needed for a UX Designer.
+      - What communication skills should a UX Designer possess?
+
+  - intent: ask_ux_additional_skills
+    examples: |
+      - Are there any additional skills needed for a UX Designer?
+      - What other skills are important for a UX Designer?
+      - Tell me about any extra skills for a UX Designer.
+      - What supplementary skills are beneficial for a UX Designer?
+
+  - intent: ask_user_research
+    examples: |
+      - What is user research?
+      - Can you explain user research in UX Design?
+      - What methods are used for user research?
+      - How important is user research for a UX Designer?
+
+  - intent: ask_prototyping
+    examples: |
+      - What is prototyping in UX Design?
+      - Can you explain prototyping tools for UX Design?
+      - What are the benefits of prototyping?
+      - How do UX Designers create prototypes?
+
+  - intent: ask_visual_design
+    examples: |
+      - What is visual design in UX?
+      - Can you explain visual design principles?
+      - What tools are used for visual design in UX?
+      - How do UX Designers create visually appealing designs?
+
+  - intent: ask_usability_testing
+    examples: |
+      - What is usability testing?
+      - Can you explain usability testing in UX Design?
+      - How do UX Designers conduct usability testing?
+      - What tools are used for usability testing?
+
+  - intent: ask_information_architecture
+    examples: |
+      - What is information architecture?
+      - Can you explain information architecture in UX Design?
+      - How do UX Designers create information architecture?
+      - What are the key principles of information architecture?
+
+  - intent: ask_portfolio
+    examples: |
+      - How important is a portfolio for a UX Designer?
+      - What should I include in my UX Designer portfolio?
+      - Can you provide tips for building a UX Designer portfolio?
+      - What are recruiters looking for in a UX Designer portfolio?
+
+
+
+  - intent: ask_about_qa_tester
+    examples: |
+      - What is the role of a Quality Assurance Tester?
+      - Explain what a QA Tester does.
+      - What are the responsibilities of a QA Tester?
+
+  - intent: ask_qa_tester_skills
+    examples: |
+      - What skills are needed for a QA Tester?
+      - What are the required skills for a QA Tester?
+      - Tell me the skills necessary for a QA Tester.
+      - What do I need to know to be a QA Tester?
+
+  - intent: ask_qa_tester_roadmap
+    examples: |
+      - How can I become a QA Tester?
+      - What's the roadmap to becoming a QA Tester?
+      - What steps should I take to be a QA Tester?
+      - Can you guide me on how to become a QA Tester?
+
+  - intent: ask_qa_technical_skills
+    examples: |
+      - What technical skills does a QA Tester need?
+      - Tell me about the technical skills required for a QA Tester.
+      - What are the technical requirements for a QA Tester?
+      - What technical abilities should a QA Tester have?
+
+  - intent: ask_qa_soft_skills
+    examples: |
+      - What soft skills are important for a QA Tester?
+      - What soft skills do I need to be a QA Tester?
+      - Tell me the soft skills needed for a QA Tester.
+      - What interpersonal skills should a QA Tester possess?
+
+  - intent: ask_qa_additional_skills
+    examples: |
+      - Are there any additional skills needed for a QA Tester?
+      - What other skills are important for a QA Tester?
+      - Tell me about any extra skills for a QA Tester.
+      - What supplementary skills are beneficial for a QA Tester?
+
+  - intent: ask_manual_testing
+    examples: |
+      - What is manual testing?
+      - Can you explain manual testing?
+      - What do QA Testers do in manual testing?
+      - Tell me about the role of manual testing in QA.
+
+  - intent: ask_automation_testing
+    examples: |
+      - What is automation testing?
+      - Can you explain automation testing?
+      - What tools are used for automation testing?
+      - How do QA Testers perform automation testing?
+
+  - intent: ask_performance_testing
+    examples: |
+      - What is performance testing?
+      - Can you explain performance testing?
+      - What tools are used for performance testing?
+      - How do QA Testers perform performance testing?
+
+  - intent: ask_api_testing
+    examples: |
+      - What is API testing?
+      - Can you explain API testing?
+      - What tools are used for API testing?
+      - How do QA Testers perform API testing?
+
+  - intent: ask_defect_tracking
+    examples: |
+      - What is defect tracking?
+      - Can you explain defect tracking?
+      - What tools are used for defect tracking?
+      - How do QA Testers track defects?
+
+  - intent: ask_sql_skills
+    examples: |
+      - Why do QA Testers need SQL skills?
+      - How important are SQL skills for QA Testers?
+      - What SQL knowledge is required for QA Testers?
+      - Tell me about SQL skills needed for QA Testing.
+
+  - intent: ask_version_control
+    examples: |
+      - Why do QA Testers need to know version control?
+      - How important is version control for QA Testers?
+      - What version control systems should QA Testers know?
+      - Tell me about version control knowledge required for QA Testing.
+
+  - intent: ask_qa_certifications
+    examples: |
+      - What certifications are recommended for QA Testers?
+      - Can you suggest certifications for QA Testers?
+      - Are there any certifications for QA Testing?
+      - What certifications should I get to become a QA Tester?
+
+  - intent: ask_qa_education
+    examples: |
+      - What education is needed to be a QA Tester?
+      - Do I need a degree to be a QA Tester?
+      - What should I study to become a QA Tester?
+      - Tell me about the educational requirements for a QA Tester.
+
+
+  - intent: ask_about_ui_designer
+    examples: |
+      - What is the role of a User Interface Designer?
+      - Explain what a UI Designer does.
+      - What are the responsibilities of a UI Designer?
+
+  - intent: ask_about_technical_writer
+    examples: |
+      - Can you tell me about the role of a Technical Writer?
+      - What does a Technical Writer do?
+      - Explain the responsibilities of a Technical Writer.
+
+  - intent: ask_about_scrum_master
+    examples: |
+      - What is the role of a Scrum Master?
+      - Explain what a Scrum Master does.
+      - What are the responsibilities of a Scrum Master?
+
+  - intent: ask_about_business_analyst
+    examples: |
+      - Can you tell me about the role of a Business Analyst?
+      - What does a Business Analyst do?
+      - Explain the responsibilities of a Business Analyst.
+
+  - intent: ask_about_systems_analyst
+    examples: |
+      - What is the role of a Systems Analyst?
+      - Explain what a Systems Analyst does.
+      - What are the responsibilities of a Systems Analyst?
+
+  - intent: ask_about_product_owner
+    examples: |
+      - Can you tell me about the role of a Product Owner?
+      - What does a Product Owner do?
+      - Explain the responsibilities of a Product Owner.
+    # ----------------------END--------------------------
+  # ---------------START--------------------------------------------
+  - intent: ai_ml
+    examples: |
+      - Can you explain job roles in artificial intelligence and machine learning?
+      - What skills are needed for a career in machine learning?
+      - Describe AI and ML job roles and their required skills.
+
+  - intent: ask_about_ml_engineer
+    examples: |
+      - What does a Machine Learning Engineer do?
+      - Explain the role of a Machine Learning Engineer.
+      - What are the responsibilities of a Machine Learning Engineer?
+
+  - intent: ask_about_data_scientist
+    examples: |
+      - Can you tell me about the role of a Data Scientist?
+      - What does a Data Scientist do?
+      - Explain the responsibilities of a Data Scientist.
+
+  - intent: ask_about_ai_research_scientist
+    examples: |
+      - What is the role of an AI Research Scientist?
+      - Explain what an AI Research Scientist does.
+      - What are the responsibilities of an AI Research Scientist?
+
+  - intent: ask_about_ml_solutions_architect
+    examples: |
+      - Can you tell me about the role of an AI/ML Solutions Architect?
+      - What does an AI/ML Solutions Architect do?
+      - Explain the responsibilities of an AI/ML Solutions Architect.
+
+  - intent: ask_about_ai_product_manager
+    examples: |
+      - What is the role of an AI/ML Product Manager?
+      - Explain what an AI/ML Product Manager does.
+      - What are the responsibilities of an AI/ML Product Manager?
+
+  - intent: ask_about_ai_research_engineer
+    examples: |
+      - Can you tell me about the role of an AI Research Engineer?
+      - What does an AI Research Engineer do?
+      - Explain the responsibilities of an AI Research Engineer.
+
+  - intent: ask_about_deep_learning_engineer
+    examples: |
+      - What is the role of a Deep Learning Engineer?
+      - Explain what a Deep Learning Engineer does.
+      - What are the responsibilities of a Deep Learning Engineer?
+
+  - intent: ask_about_computer_vision_engineer
+    examples: |
+      - Can you tell me about the role of a Computer Vision Engineer?
+      - What does a Computer Vision Engineer do?
+      - Explain the responsibilities of a Computer Vision Engineer.
+
+  - intent: ask_about_nlp_engineer
+    examples: |
+      - What is the role of a Natural Language Processing (NLP) Engineer?
+      - Explain what a NLP Engineer does.
+      - What are the responsibilities of a NLP Engineer?
+
+  - intent: ask_about_ai_ops_engineer
+    examples: |
+      - Can you tell me about the role of an AI/ML Operations Engineer?
+      - What does an AI/ML Operations Engineer do?
+      - Explain the responsibilities of an AI/ML Operations Engineer.
+  # ---------------------END------------------------------------------
+  # -------------START---------------------------------------
+
+  - intent: cybersecurity
+    examples: |
+      - What are the job roles and skills needed in cybersecurity?
+      - Explain the role of a cybersecurity analyst.
+      - Can you list the skills required for ethical hackers?
+
+  - intent: ask_about_security_analyst
+    examples: |
+      - What does a Security Analyst do?
+      - Explain the role of a Security Analyst.
+      - What are the responsibilities of a Security Analyst?
+
+  - intent: ask_about_penetration_tester
+    examples: |
+      - Can you tell me about the role of a Penetration Tester?
+      - What does a Penetration Tester do?
+      - Explain the responsibilities of a Penetration Tester.
+
+  - intent: ask_about_security_engineer
+    examples: |
+      - What is the role of a Security Engineer?
+      - Explain what a Security Engineer does.
+      - What are the responsibilities of a Security Engineer?
+
+  - intent: ask_about_incident_responder
+    examples: |
+      - Can you tell me about the role of an Incident Responder?
+      - What does an Incident Responder do?
+      - Explain the responsibilities of an Incident Responder.
+
+  - intent: ask_about_security_consultant
+    examples: |
+      - What is the role of a Security Consultant?
+      - Explain what a Security Consultant does.
+      - What are the responsibilities of a Security Consultant?
+
+  - intent: ask_about_security_architect
+    examples: |
+      - Can you tell me about the role of a Security Architect?
+      - What does a Security Architect do?
+      - Explain the responsibilities of a Security Architect.
+
+  - intent: ask_about_ciso
+    examples: |
+      - What is the role of a Chief Information Security Officer (CISO)?
+      - Explain what a CISO does.
+      - What are the responsibilities of a CISO?
+
+  - intent: ask_about_forensic_analyst
+    examples: |
+      - Can you tell me about the role of a Forensic Analyst?
+      - What does a Forensic Analyst do?
+      - Explain the responsibilities of a Forensic Analyst.
+
+  - intent: ask_about_soc_analyst
+    examples: |
+      - What is the role of a Security Operations Center (SOC) Analyst?
+      - Explain what a SOC Analyst does.
+      - What are the responsibilities of a SOC Analyst?
+
+  - intent: ask_about_security_compliance_analyst
+    examples: |
+      - Can you tell me about the role of a Security Compliance Analyst?
+      - What does a Security Compliance Analyst do?
+      - Explain the responsibilities of a Security Compliance Analyst.
+
+  # -------------END--------------------------------------------------------
+
+  # ----------Start-----------------------------------
+  - intent: data_science_bigdata
+    examples: |
+      - What are the typical job roles in data science and big data?
+      - Describe the skills needed for a data scientist.
+      - Explain the role of a big data engineer.
+
+  - intent: ask_about_big_data_engineer
+    examples: |
+      - Can you tell me about the role of a Big Data Engineer?
+      - What does a Big Data Engineer do?
+      - Explain the responsibilities of a Big Data Engineer.
+
+  - intent: ask_about_data_analyst
+    examples: |
+      - What is the role of a Data Analyst?
+      - Explain what a Data Analyst does.
+      - What are the responsibilities of a Data Analyst?
+
+  - intent: ask_about_machine_learning_engineer
+    examples: |
+      - Can you tell me about the role of a Machine Learning Engineer?
+      - What does a Machine Learning Engineer do?
+      - Explain the responsibilities of a Machine Learning Engineer.
+
+  - intent: ask_about_data_architect
+    examples: |
+      - What is the role of a Data Architect?
+      - Explain what a Data Architect does.
+      - What are the responsibilities of a Data Architect?
+
+  - intent: ask_about_bi_analyst
+    examples: |
+      - Can you tell me about the role of a Business Intelligence Analyst?
+      - What does a Business Intelligence Analyst do?
+      - Explain the responsibilities of a Business Intelligence Analyst.
+
+  - intent: ask_about_data_engineer
+    examples: |
+      - What is the role of a Data Engineer?
+      - Explain what a Data Engineer does.
+      - What are the responsibilities of a Data Engineer?
+
+  - intent: ask_about_data_mining_engineer
+    examples: |
+      - Can you tell me about the role of a Data Mining Engineer?
+      - What does a Data Mining Engineer do?
+      - Explain the responsibilities of a Data Mining Engineer.
+
+  - intent: ask_about_quantitative_analyst
+    examples: |
+      - What is the role of a Quantitative Analyst?
+      - Explain what a Quantitative Analyst does.
+      - What are the responsibilities of a Quantitative Analyst?
+
+  - intent: ask_about_data_visualization_specialist
+    examples: |
+      - Can you tell me about the role of a Data Visualization Specialist?
+      - What does a Data Visualization Specialist do?
+      - Explain the responsibilities of a Data Visualization Specialist.
+
+  # -------------------------------------------------------------
+
+  - intent: cloud_computing
+    examples: |
+      - Tell me about job roles in cloud computing.
+      - What skills are necessary for a cloud architect?
+      - Describe the role of a DevOps engineer in cloud computing.
+
+  - intent: ask_about_cloud_solutions_architect
+    examples: |
+      - What does a Cloud Solutions Architect do?
+      - Explain the role of a Cloud Solutions Architect.
+      - What are the responsibilities of a Cloud Solutions Architect?
+
+  - intent: ask_about_cloud_engineers
+    examples: |
+      - Can you tell me about the role of a Cloud Engineer?
+      - What does a Cloud Engineer do?
+      - Explain the responsibilities of a Cloud Engineer.
+
+  - intent: ask_about_cloud_consultant
+    examples: |
+      - What is the role of a Cloud Consultant?
+      - Explain what a Cloud Consultant does.
+      - What are the responsibilities of a Cloud Consultant?
+
+  - intent: ask_about_cloud_administrator
+    examples: |
+      - Can you tell me about the role of a Cloud Administrator?
+      - What does a Cloud Administrator do?
+      - Explain the responsibilities of a Cloud Administrator.
+
+  - intent: ask_about_devops_engineer
+    examples: |
+      - What is the role of a DevOps Engineer in cloud computing?
+      - Explain what a DevOps Engineer does in cloud environments.
+      - What are the responsibilities of a DevOps Engineer in cloud?
+
+  - intent: ask_about_cloud_security_engineer
+    examples: |
+      - Can you tell me about the role of a Cloud Security Engineer?
+      - What does a Cloud Security Engineer do?
+      - Explain the responsibilities of a Cloud Security Engineer.
+
+  - intent: ask_about_cloud_data_engineer
+    examples: |
+      - What is the role of a Cloud Data Engineer?
+      - Explain what a Cloud Data Engineer does.
+      - What are the responsibilities of a Cloud Data Engineer?
+
+  - intent: ask_about_cloud_operations_engineer
+    examples: |
+      - What is the role of a Cloud Operations Engineer?
+      - Explain what a Cloud Operations Engineer does.
+      - What are the responsibilities of a Cloud Operations Engineer?
+
+  - intent: ask_about_cloud_developer
+    examples: |
+      - Can you tell me about the role of a Cloud Developer?
+      - What does a Cloud Developer do?
+      - Explain the responsibilities of a Cloud Developer.
+
+  # ----------------------------------------------------------------
+  - intent: mobile_app_development
+    examples: |
+      - Explain the job roles in mobile app development.
+      - What skills are required for mobile app developers?
+      - Describe the role of a mobile software engineer.
+
+  - intent: ask_about_mobile_app_developer
+    examples: |
+      - What does a Mobile App Developer do?
+      - Explain the role of a Mobile App Developer.
+      - What are the responsibilities of a Mobile App Developer?
+
+  - intent: ask_about_ios_developer
+    examples: |
+      - Can you tell me about the role of an iOS Developer?
+      - What does an iOS Developer do?
+      - Explain the responsibilities of an iOS Developer.
+
+  - intent: ask_about_android_developer
+    examples: |
+      - What is the role of an Android Developer?
+      - Explain what an Android Developer does.
+      - What are the responsibilities of an Android Developer?
+
+  - intent: ask_about_mobile_app_architect
+    examples: |
+      - Can you tell me about the role of a Mobile App Architect?
+      - What does a Mobile App Architect do?
+      - Explain the responsibilities of a Mobile App Architect.
+
+  - intent: ask_about_mobile_app_ui_ux_designer
+    examples: |
+      - What is the role of a Mobile App UI/UX Designer?
+      - Explain what a Mobile App UI/UX Designer does.
+      - What are the responsibilities of a Mobile App UI/UX Designer?
+
+  - intent: ask_about_mobile_app_tester
+    examples: |
+      - Can you tell me about the role of a Mobile App Tester?
+      - What does a Mobile App Tester do?
+      - Explain the responsibilities of a Mobile App Tester.
+
+  - intent: ask_about_mobile_app_product_manager
+    examples: |
+      - What is the role of a Mobile App Product Manager?
+      - Explain what a Mobile App Product Manager does.
+      - What are the responsibilities of a Mobile App Product Manager?
+
+  - intent: ask_about_mobile_app_project_manager
+    examples: |
+      - Can you tell me about the role of a Mobile App Project Manager?
+      - What does a Mobile App Project Manager do?
+      - Explain the responsibilities of a Mobile App Project Manager.
+
+  - intent: ask_about_mobile_app_marketing_specialist
+    examples: |
+      - What is the role of a Mobile App Marketing Specialist?
+      - Explain what a Mobile App Marketing Specialist does.
+      - What are the responsibilities of a Mobile App Marketing Specialist?
+
+  - intent: ask_about_mobile_app_support_engineer
+    examples: |
+      - Can you tell me about the role of a Mobile App Support Engineer?
+      - What does a Mobile App Support Engineer do?
+      - Explain the responsibilities of a Mobile App Support Engineer.
+
+  # -------------------------------------------------------------------
+
+  - intent: web_development
+    examples: |
+      - Can you list job roles in web development?
+      - What skills are needed for a web developer?
+      - Describe the role of a full-stack developer.
+
+  - intent: ask_about_frontend_developer
+    examples: |
+      - What does a Frontend Developer do?
+      - Explain the role of a Frontend Developer.
+      - What are the responsibilities of a Frontend Developer?
+
+  - intent: ask_about_backend_developer
+    examples: |
+      - Can you tell me about the role of a Backend Developer?
+      - What does a Backend Developer do?
+      - Explain the responsibilities of a Backend Developer.
+
+  - intent: ask_about_fullstack_developer
+    examples: |
+      - What is the role of a Full-stack Developer?
+      - Explain what a Full-stack Developer does.
+      - What are the responsibilities of a Full-stack Developer?
+
+  - intent: ask_about_web_designer
+    examples: |
+      - Can you tell me about the role of a Web Designer?
+      - What does a Web Designer do?
+      - Explain the responsibilities of a Web Designer.
+
+  - intent: ask_about_uiux_designer
+    examples: |
+      - What is the role of a UI/UX Designer?
+      - Explain what a UI/UX Designer does.
+      - What are the responsibilities of a UI/UX Designer?
+
+  - intent: ask_about_web_developer
+    examples: |
+      - Can you tell me about the role of a Web Developer?
+      - What does a Web Developer do?
+      - Explain the responsibilities of a Web Developer.
+
+  - intent: ask_about_web_architect
+    examples: |
+      - What is the role of a Web Architect?
+      - Explain what a Web Architect does.
+      - What are the responsibilities of a Web Architect?
+
+  - intent: ask_about_web_project_manager
+    examples: |
+      - Can you tell me about the role of a Web Project Manager?
+      - What does a Web Project Manager do?
+      - Explain the responsibilities of a Web Project Manager.
+
+  - intent: ask_about_web_qa_engineer
+    examples: |
+      - What is the role of a Web Quality Assurance Engineer?
+      - Explain what a Web QA Engineer does.
+      - What are the responsibilities of a Web QA Engineer?
+
+  - intent: ask_about_web_content_manager
+    examples: |
+      - Can you tell me about the role of a Web Content Manager?
+      - What does a Web Content Manager do?
+      - Explain the responsibilities of a Web Content Manager.
+
+  # --------------------------------------------------------------------
+
+  - intent: database_management
+    examples: |
+      - Tell me about job roles in database management.
+      - What skills are necessary for a database developer?
+      - Explain the role of a database administrator.
+
+  - intent: ask_about_dba
+    examples: |
+      - What does a Database Administrator (DBA) do?
+      - Explain the role of a Database Administrator.
+      - What are the responsibilities of a DBA?
+
+  - intent: ask_about_database_developer
+    examples: |
+      - Can you tell me about the role of a Database Developer?
+      - What does a Database Developer do?
+      - Explain the responsibilities of a Database Developer.
+
+  - intent: ask_about_database_analyst
+    examples: |
+      - Can you tell me about the role of a Database Analyst?
+      - What does a Database Analyst do?
+      - Explain the responsibilities of a Database Analyst.
+
+  - intent: ask_about_data_engineers
+    examples: |
+      - What is the role of a Data Engineer?
+      - Explain what a Data Engineer does.
+      - What are the responsibilities of a Data Engineer?
+
+  - intent: ask_about_data_warehouse_manager
+    examples: |
+      - Can you tell me about the role of a Data Warehouse Manager?
+      - What does a Data Warehouse Manager do?
+      - Explain the responsibilities of a Data Warehouse Manager.
+
+  - intent: ask_about_database_security_specialist
+    examples: |
+      - What is the role of a Database Security Specialist?
+      - Explain what a Database Security Specialist does.
+      - What are the responsibilities of a Database Security Specialist?
+
+  - intent: ask_about_database_performance_analyst
+    examples: |
+      - Can you tell me about the role of a Database Performance Analyst?
+      - What does a Database Performance Analyst do?
+      - Explain the responsibilities of a Database Performance Analyst.
+
+  - intent: ask_about_database_consultant
+    examples: |
+      - What is the role of a Database Consultant?
+      - Explain what a Database Consultant does.
+      - What are the responsibilities of a Database Consultant?
+
+  - intent: ask_about_data_governance_manager
+    examples: |
+      - Can you tell me about the role of a Data Governance Manager?
+      - What does a Data Governance Manager do?
+      - Explain the responsibilities of a Data Governance Manager.
+
+  # ------------------------------------------------------------------------------------------
+
+  - intent: networking
+    examples: |
+      - Explain the job roles in networking.
+      - What skills are required for network engineers?
+      - Describe the role of a network administrator.
+
+  - intent: ask_about_network_engineer
+    examples: |
+      - What does a Network Engineer do?
+      - Explain the role of a Network Engineer.
+      - What are the responsibilities of a Network Engineer?
+
+  - intent: ask_about_network_administrator
+    examples: |
+      - Can you tell me about the role of a Network Administrator?
+      - What does a Network Administrator do?
+      - Explain the responsibilities of a Network Administrator.
+
+  - intent: ask_about_network_security_engineer
+    examples: |
+      - What is the role of a Network Security Engineer?
+      - Explain what a Network Security Engineer does.
+      - What are the responsibilities of a Network Security Engineer?
+
+  - intent: ask_about_systems_administrator
+    examples: |
+      - Can you tell me about the role of a Systems Administrator?
+      - What does a Systems Administrator do?
+      - Explain the responsibilities of a Systems Administrator.
+
+  - intent: ask_about_network_architect
+    examples: |
+      - What is the role of a Network Architect?
+      - Explain what a Network Architect does.
+      - What are the responsibilities of a Network Architect?
+
+  - intent: ask_about_network_analyst
+    examples: |
+      - Can you tell me about the role of a Network Analyst?
+      - What does a Network Analyst do?
+      - Explain the responsibilities of a Network Analyst.
+
+  - intent: ask_about_noc_technician
+    examples: |
+      - What is the role of a Network Operations Center (NOC) Technician?
+      - Explain what a NOC Technician does.
+      - What are the responsibilities of a NOC Technician?
+
+  - intent: ask_about_wireless_network_engineer
+    examples: |
+      - Can you tell me about the role of a Wireless Network Engineer?
+      - What does a Wireless Network Engineer do?
+      - Explain the responsibilities of a Wireless Network Engineer.
+
+  - intent: ask_about_cloud_network_engineer
+    examples: |
+      - What is the role of a Cloud Network Engineer?
+      - Explain what a Cloud Network Engineer does.
+      - What are the responsibilities of a Cloud Network Engineer?
+
+  - intent: ask_about_network_support_specialist
+    examples: |
+      - Can you tell me about the role of a Network Support Specialist?
+      - What does a Network Support Specialist do?
+      - Explain the responsibilities of a Network Support Specialist.
+
+  # ------------------------------------------------------------------------
+
+  - intent: embedded_systems
+    examples: |
+      - Can you list job roles in embedded systems?
+      - What skills are needed for embedded systems engineers?
+      - Explain the role of a firmware engineer.
+
+  - intent: ask_about_embedded_systems_engineer
+    examples: |
+      - What does an Embedded Systems Engineer do?
+      - Explain the role of an Embedded Systems Engineer.
+      - What are the responsibilities of an Embedded Systems Engineer?
+
+  - intent: ask_about_firmware_engineer
+    examples: |
+      - Can you tell me about the role of a Firmware Engineer?
+      - What does a Firmware Engineer do?
+      - Explain the responsibilities of a Firmware Engineer.
+
+  - intent: ask_about_embedded_software_developer
+    examples: |
+      - What is the role of an Embedded Software Developer?
+      - Explain what an Embedded Software Developer does.
+      - What are the responsibilities of an Embedded Software Developer?
+
+  - intent: ask_about_hardware_engineer
+    examples: |
+      - Can you tell me about the role of a Hardware Engineer in embedded systems?
+      - What does a Hardware Engineer do in embedded systems?
+      - Explain the responsibilities of a Hardware Engineer in embedded systems.
+
+  - intent: ask_about_embedded_systems_architect
+    examples: |
+      - What is the role of an Embedded Systems Architect?
+      - Explain what an Embedded Systems Architect does.
+      - What are the responsibilities of an Embedded Systems Architect?
+
+  - intent: ask_about_embedded_systems_tester
+    examples: |
+      - Can you tell me about the role of an Embedded Systems Tester?
+      - What does an Embedded Systems Tester do?
+      - Explain the responsibilities of an Embedded Systems Tester.
+
+  - intent: ask_about_system_integration_engineer
+    examples: |
+      - What is the role of a System Integration Engineer in embedded systems?
+      - Explain what a System Integration Engineer does in embedded systems.
+      - What are the responsibilities of a System Integration Engineer?
+
+  - intent: ask_about_real_time_systems_engineer
+    examples: |
+      - Can you tell me about the role of a Real-Time Systems Engineer?
+      - What does a Real-Time Systems Engineer do?
+      - Explain the responsibilities of a Real-Time Systems Engineer.
+
+  - intent: ask_about_embedded_systems_project_manager
+    examples: |
+      - What is the role of an Embedded Systems Project Manager?
+      - Explain what an Embedded Systems Project Manager does.
+      - What are the responsibilities of an Embedded Systems Project Manager?
+
+  - intent: ask_about_embedded_systems_consultant
+    examples: |
+      - Can you tell me about the role of an Embedded Systems Consultant?
+      - What does an Embedded Systems Consultant do?
+      - Explain the responsibilities of an Embedded Systems Consultant.
+
+
+# Product Manager-Software Development Role------------------
+entities:
+- role
+- responsibilities
+- market_research
+- product_strategy
+- roadmap_creation
+- agile_methodology
+- user_testing
+- go_to_market_strategy
+- post_launch_activities
+- long_term_strategy
+- tools_and_techniques
+- skills_development
+- miscellaneous

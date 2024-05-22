@@ -1,0 +1,811 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  # ----------------------------------------------
+  - software_development
+  - ask_about_product_manager
+  - ask_role_responsibilities
+  - ask_stakeholder_management
+  - ask_market_research
+  - ask_product_strategy
+  - ask_roadmap_creation
+  - ask_agile_methodology
+  - ask_user_testing
+  - ask_go_to_market_strategy
+  - ask_post_launch_activities
+  - ask_long_term_strategy
+  - ask_tools_and_techniques
+  - ask_skills_development
+  - ask_miscellaneous
+
+  - ask_about_project_manager
+  - ask_about_project_manager_role
+  - ask_about_project_management_skills
+  - ask_about_project_management_methodologies
+  - ask_about_project_management_tools
+  - ask_about_project_management_certifications
+  - ask_about_project_risk_management
+  - ask_about_project_quality_management
+  - ask_about_project_stakeholder_management
+
+  - ask_about_ux_designer
+  - ask_ux_designer_skills
+  - ask_ux_designer_roadmap
+  - ask_ux_technical_skills
+  - ask_ux_soft_skills
+  - ask_ux_additional_skills
+  - ask_user_research
+  - ask_prototyping
+  - ask_visual_design
+  - ask_usability_testing
+  - ask_information_architecture
+  - ask_portfolio
+  - ask_about_qa_tester
+  - ask_qa_tester_skills
+  - ask_qa_tester_roadmap
+  - ask_qa_technical_skills
+  - ask_qa_soft_skills
+  - ask_qa_additional_skills
+  - ask_manual_testing
+  - ask_automation_testing
+  - ask_performance_testing
+  - ask_api_testing
+  - ask_defect_tracking
+  - ask_sql_skills
+  - ask_version_control
+  - ask_qa_certifications
+  - ask_qa_education
+
+  - ask_about_ui_designer
+  - ask_about_technical_writer
+  - ask_about_scrum_master
+  - ask_about_business_analyst
+  - ask_about_systems_analyst
+  - ask_about_product_owner
+
+  - ai_ml
+  - ask_about_ml_engineer
+  - ask_about_data_scientist
+  - ask_about_ai_research_scientist
+  - ask_about_ml_solutions_architect
+  - ask_about_ai_product_manager
+  - ask_about_ai_research_engineer
+  - ask_about_deep_learning_engineer
+  - ask_about_computer_vision_engineer
+  - ask_about_nlp_engineer
+  - ask_about_ai_ops_engineer
+
+  - cybersecurity
+  - ask_about_security_analyst
+  - ask_about_penetration_tester
+  - ask_about_security_engineer
+  - ask_about_incident_responder
+  - ask_about_security_consultant
+  - ask_about_security_architect
+  - ask_about_ciso
+  - ask_about_forensic_analyst
+  - ask_about_soc_analyst
+  - ask_about_security_compliance_analyst
+
+  - data_science_bigdata
+  - ask_about_big_data_engineer
+  - ask_about_data_analyst
+  - ask_about_machine_learning_engineer
+  - ask_about_data_architect
+  - ask_about_bi_analyst
+  - ask_about_data_engineer
+  - ask_about_data_mining_engineer
+  - ask_about_quantitative_analyst
+  - ask_about_data_visualization_specialist
+
+  - cloud_computing
+  - ask_about_cloud_solutions_architect
+  - ask_about_cloud_engineers
+  - ask_about_cloud_consultant
+  - ask_about_cloud_administrator
+  - ask_about_devops_engineer
+  - ask_about_cloud_security_engineer
+  - ask_about_cloud_data_engineer
+  - ask_about_cloud_operations_engineer
+  - ask_about_cloud_developer
+
+  - mobile_app_development
+  - ask_about_mobile_app_developer
+  - ask_about_ios_developer
+  - ask_about_android_developer
+  - ask_about_mobile_app_architect
+  - ask_about_mobile_app_ui_ux_designer
+  - ask_about_mobile_app_tester
+  - ask_about_mobile_app_product_manager
+  - ask_about_mobile_app_project_manager
+  - ask_about_mobile_app_marketing_specialist
+  - ask_about_mobile_app_support_engineer
+
+  - web_development
+  - ask_about_frontend_developer
+  - ask_about_backend_developer
+  - ask_about_fullstack_developer
+  - ask_about_web_designer
+  - ask_about_uiux_designer
+  - ask_about_web_developer
+  - ask_about_web_architect
+  - ask_about_web_project_manager
+  - ask_about_web_qa_engineer
+  - ask_about_web_content_manager
+
+  - database_management
+  - ask_about_dba
+  - ask_about_database_developer
+  - ask_about_database_analyst
+  - ask_about_data_engineers
+  - ask_about_data_warehouse_manager
+  - ask_about_database_security_specialist
+  - ask_about_database_performance_analyst
+  - ask_about_database_consultant
+  - ask_about_data_governance_manager
+  
+  - networking
+  - ask_about_network_engineer
+  - ask_about_network_administrator
+  - ask_about_network_security_engineer
+  - ask_about_systems_administrator
+  - ask_about_network_architect
+  - ask_about_network_analyst
+  - ask_about_noc_technician
+  - ask_about_wireless_network_engineer
+  - ask_about_cloud_network_engineer
+  - ask_about_network_support_specialist
+  
+  - embedded_systems
+  - ask_about_embedded_systems_engineer
+  - ask_about_firmware_engineer
+  - ask_about_embedded_software_developer
+  - ask_about_hardware_engineer
+  - ask_about_embedded_systems_architect
+  - ask_about_embedded_systems_tester
+  - ask_about_system_integration_engineer
+  - ask_about_real_time_systems_engineer
+  - ask_about_embedded_systems_project_manager
+  - ask_about_embedded_systems_consultant
+
+entities:
+  - role
+  - responsibilities
+  - market_research
+  - product_strategy
+  - roadmap_creation
+  - agile_methodology
+  - user_testing
+  - go_to_market_strategy
+  - post_launch_activities
+  - long_term_strategy
+  - tools_and_techniques
+  - skills_development
+  - miscellaneous
+
+
+
+slots:
+  role:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: role
+  responsibilities:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: responsibilities
+  market_research:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: market_research
+  product_strategy:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product_strategy
+  roadmap_creation:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: roadmap_creation
+  agile_methodology:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: agile_methodology
+  user_testing:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: user_testing
+  go_to_market_strategy:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: go_to_market_strategy
+  post_launch_activities:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: post_launch_activities
+  long_term_strategy:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: long_term_strategy
+  tools_and_techniques:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tools_and_techniques
+  skills_development:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: skills_development
+  miscellaneous:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: miscellaneous
+
+  
+
+responses:
+  utter_greet:
+    - text: "Hey! How can i help you today?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+# ----------------------------------------------------------
+
+
+  
+
+
+  utter_software_development:
+    - text: "In software development, job roles include 1. Product Manager 2. Project Manager 3. Quality Assurance (QA) Tester 4. User Experience (UX) Designer 5. User Interface (UI) Designer 6. Technical Writer 7. Scrum Master 8. Business Analyst 9. Systems Analyst 10. Product Owner. and The required skills are proficiency in programming languages such as Java, Python, JavaScript, C++, knowledge of frameworks like React, Angular, Django, Spring, understanding of algorithms and data structures, experience with version control systems like Git, software architecture, design patterns, and problem-solving skills."
+  utter_ask_about_product_manager:
+    - text: "A Product Manager is responsible for defining the features and functionality of a product, prioritizing work, and ensuring alignment with business goals."
+  utter_ask_role_responsibilities:
+    - text: "A Product Manager is responsible for setting the product vision, strategy, roadmap, and defining features. They collaborate with cross-functional teams, conduct market research, and gather user feedback."
+  utter_ask_stakeholder_management:
+    - text: "Effective stakeholder management involves clear communication, understanding stakeholder needs, and ensuring alignment with the product vision. Regular updates and involving stakeholders in the decision-making process are key."
+  utter_ask_market_research:
+    - text: "Market research involves analyzing market trends, competitor products, and customer needs. Techniques include surveys, interviews, focus groups, and data analysis."
+  utter_ask_product_strategy:
+    - text: "Developing a product strategy involves setting a clear vision, defining goals, understanding the market, and aligning the strategy with the company's objectives. It also includes prioritizing features and planning the product roadmap."
+  utter_ask_roadmap_creation:
+    - text: "Creating a product roadmap involves prioritizing features based on business value and feasibility, setting milestones, and defining timelines. Tools like JIRA, Trello, or Roadmunk can be used for roadmap creation."
+  utter_ask_agile_methodology:
+    - text: "Agile methodology is an iterative approach to software development. Popular practices include Scrum, which focuses on sprints, and Kanban, which emphasizes continuous delivery. Agile promotes flexibility and customer feedback."
+  utter_ask_user_testing:
+    - text: "User testing involves gathering feedback from users through usability tests, surveys, and interviews. The goal is to identify usability issues and improve the product based on user feedback."
+  utter_ask_go_to_market_strategy:
+    - text: "A go-to-market strategy involves planning the product launch, coordinating with marketing and sales, and ensuring all teams are prepared. It includes setting objectives, defining key messages, and executing the launch plan."
+  utter_ask_post_launch_activities:
+    - text: "Post-launch activities include monitoring product performance, gathering user feedback, and planning for continuous improvement. Analyzing key performance indicators (KPIs) helps in making data-driven decisions."
+  utter_ask_long_term_strategy:
+    - text: "Long-term strategy involves planning for product growth, exploring new market opportunities, and staying updated with industry trends. Fostering innovation and continuous improvement are crucial for long-term success."
+  utter_ask_tools_and_techniques:
+    - text: "Common tools for product management include JIRA, Trello for project management, Sketch, Figma for design, Google Analytics, Mixpanel for analytics, and SurveyMonkey, Typeform for user feedback."
+  utter_ask_skills_development:
+    - text: "Key skills for a Product Manager include strategic thinking, communication, technical understanding, business acumen, and leadership. Continuous learning and adapting to new challenges are essential."
+  utter_ask_miscellaneous:
+    - text: "Product Managers often face challenges such as balancing competing priorities, handling stakeholder expectations, and staying agile in a fast-paced environment. Strong problem-solving skills are essential."
+
+
+
+
+
+  utter_ask_about_project_manager:
+    - text: "A Project Manager plans, organizes, and oversees projects within an organization, ensuring they are completed on time, within budget, and according to specifications."
+
+  utter_ask_about_project_manager_role:
+    - text: "A Project Manager plays a key role in planning, executing, and managing projects. They are responsible for defining project objectives, creating project plans, allocating resources, managing budgets, and ensuring project success."
+
+  utter_ask_about_project_management_skills:
+    - text: "Project Managers need a diverse set of skills to effectively manage projects. These include leadership, communication, time management, risk management, problem-solving, and adaptability, among others."
+
+  utter_ask_about_project_management_methodologies:
+    - text: "Project management methodologies define how projects are planned, executed, and controlled. Common methodologies include Agile, Waterfall, PRINCE2, Scrum, Kanban, and Hybrid approaches."
+
+  utter_ask_about_project_management_tools:
+    - text: "There are various tools available to assist Project Managers in managing projects efficiently. Examples include project management software like JIRA, Trello, Asana, Microsoft Project, and collaboration tools like Slack, Microsoft Teams, and Google Workspace."
+
+  utter_ask_about_project_management_certifications:
+    - text: "Project management certifications validate the skills and knowledge of Project Managers. Popular certifications include Project Management Professional (PMP), Certified ScrumMaster (CSM), PRINCE2 Practitioner, and Agile Certified Practitioner (PMI-ACP)."
+
+  utter_ask_about_project_risk_management:
+    - text: "Risk management is essential in project management to identify, assess, and mitigate risks that may impact project objectives. Techniques include risk identification, risk analysis, risk response planning, and risk monitoring and control."
+
+  utter_ask_about_project_quality_management:
+    - text: "Quality management ensures that project deliverables meet quality standards and customer expectations. It includes quality planning, quality assurance, quality control, and continuous improvement processes."
+
+  utter_ask_about_project_stakeholder_management:
+    - text: "Stakeholder management involves identifying stakeholders, understanding their needs and expectations, and effectively engaging with them throughout the project lifecycle. It includes communication, relationship building, and stakeholder analysis techniques."
+
+
+
+
+  utter_ux_designer_role:
+    - text: >
+        A UX Designer is responsible for creating products that provide meaningful and relevant experiences to users. This involves designing the entire process of acquiring and integrating the product, including aspects of branding, design, usability, and function.
+
+  utter_ux_designer_skills:
+    - text: >
+        The skills needed for a UX Designer include a mix of technical skills, design principles, and soft skills. These include user research, information architecture, prototyping, visual design, usability testing, communication, problem-solving, and empathy.
+
+  utter_ux_designer_roadmap:
+    - text: >
+        To become a UX Designer, you can follow a roadmap that includes formal education, practical experience, skill development, certifications, networking, and continuous learning. It's important to build a strong portfolio to showcase your work.
+
+  utter_ux_technical_skills:
+    - text: >
+        Technical skills required for a UX Designer include proficiency in design tools like Sketch, Adobe XD, or Figma, knowledge of prototyping tools, understanding of front-end technologies like HTML/CSS, and familiarity with usability testing tools.
+
+  utter_ux_soft_skills:
+    - text: >
+        Soft skills are essential for a UX Designer and include communication, collaboration, problem-solving, empathy, attention to detail, adaptability, and time management. These skills enable UX Designers to work effectively in multidisciplinary teams and understand user needs.
+
+  utter_ux_additional_skills:
+    - text: >
+        Additional skills beneficial for a UX Designer include user psychology, accessibility knowledge, analytics and data-driven design, content strategy, business acumen, and project management. These skills enhance the overall user experience and contribute to design success.
+
+  utter_user_research:
+    - text: >
+        User research involves understanding user behaviors, needs, and motivations through methods like interviews, surveys, and usability testing. It helps UX Designers create products that meet user expectations and solve real-world problems.
+
+  utter_prototyping:
+    - text: >
+        Prototyping is the process of creating interactive models of a product to test and validate design concepts. UX Designers use prototyping tools like InVision, Axure, or Adobe XD to simulate the user experience and gather feedback before finalizing designs.
+
+  utter_visual_design:
+    - text: >
+        Visual design focuses on the aesthetics and look-and-feel of a product. UX Designers use principles of typography, color theory, and layout to create visually appealing designs that align with brand guidelines and enhance the user experience.
+
+  utter_usability_testing:
+    - text: >
+        Usability testing involves evaluating the ease of use and effectiveness of a product through real user interactions. UX Designers conduct usability tests to identify usability issues, gather feedback, and iterate on designs to improve the overall user experience.
+
+  utter_information_architecture:
+    - text: >
+        Information architecture (IA) is the organization and structure of content within a product. UX Designers create IA schemes like sitemaps and navigation structures to ensure content is findable, accessible, and intuitive for users.
+
+  utter_portfolio:
+    - text: >
+        A portfolio is crucial for a UX Designer as it showcases their design process, projects, and skills to potential employers or clients. A strong portfolio should include case studies, wireframes, prototypes, visual designs, and descriptions of your design approach and contributions.
+
+  utter_qa_tester_role:
+    - text: >
+        A QA Tester is responsible for ensuring that software products are free of defects and meet quality standards. This involves designing and executing test plans, identifying and reporting bugs, and collaborating with development teams to resolve issues.
+
+  utter_qa_tester_skills:
+    - text: >
+        The skills needed for a QA Tester include a mix of technical skills, analytical abilities, and soft skills. Key skills include manual and automated testing, familiarity with testing tools, defect tracking, SQL knowledge, and communication.
+
+  utter_qa_tester_roadmap:
+    - text: >
+        To become a QA Tester, follow a roadmap that includes acquiring relevant education, gaining hands-on experience through internships or entry-level positions, developing technical skills, obtaining certifications, and continuous learning.
+
+  utter_qa_technical_skills:
+    - text: >
+        Technical skills required for a QA Tester include proficiency in manual testing techniques, automation tools like Selenium, performance testing tools like JMeter, API testing tools, and knowledge of SQL for database testing.
+
+  utter_qa_soft_skills:
+    - text: >
+        Soft skills are essential for a QA Tester and include communication, attention to detail, analytical thinking, problem-solving, and teamwork. These skills enable QA Testers to effectively collaborate with developers and understand complex issues.
+
+  utter_qa_additional_skills:
+    - text: >
+        Additional skills beneficial for a QA Tester include knowledge of version control systems like Git, familiarity with Agile methodologies, understanding of business processes, and project management skills. These skills help in managing testing processes effectively.
+
+  utter_manual_testing:
+    - text: >
+        Manual testing involves manually executing test cases without the use of automation tools. QA Testers perform manual testing to identify defects, verify functionality, and ensure the software meets user requirements.
+
+  utter_automation_testing:
+    - text: >
+        Automation testing involves using tools and scripts to automate repetitive testing tasks. QA Testers use automation tools like Selenium or QTP to increase testing efficiency, coverage, and accuracy.
+
+  utter_performance_testing:
+    - text: >
+        Performance testing evaluates the speed, responsiveness, and stability of a software application under various conditions. QA Testers use tools like JMeter or LoadRunner to simulate user load and identify performance bottlenecks.
+
+  utter_api_testing:
+    - text: >
+        API testing involves testing application programming interfaces (APIs) to ensure they meet functionality, reliability, and security standards. QA Testers use tools like Postman or SoapUI to validate API responses and interactions.
+
+  utter_defect_tracking:
+    - text: >
+        Defect tracking is the process of identifying, recording, and managing defects or bugs found during testing. QA Testers use tools like JIRA or Bugzilla to report and track the resolution of defects.
+
+  utter_sql_skills:
+    - text: >
+        SQL skills are important for QA Testers to validate data integrity, perform database testing, and write queries to verify backend data. Knowledge of SQL helps in testing database-driven applications effectively.
+
+  utter_version_control:
+    - text: >
+        Version control systems like Git are crucial for QA Testers to manage and track changes in test scripts, collaborate with developers, and maintain code integrity. Understanding version control helps in effective test management.
+
+  utter_qa_certifications:
+    - text: >
+        Certifications like ISTQB, CSTE, or CSQA are recommended for QA Testers to validate their skills and knowledge in software testing. These certifications enhance credibility and job prospects in the QA field.
+
+  utter_qa_education:
+    - text: >
+        A degree in Computer Science, Information Technology, or a related field is typically required to be a QA Tester. Additional coursework in software testing, programming, and quality assurance can also be beneficial.
+
+
+
+  utter_ask_about_ui_designer:
+    - text: "A User Interface Designer designs the visual elements of a product, such as menus, buttons, and icons, to make it visually appealing and easy to use."
+
+  utter_ask_about_technical_writer:
+    - text: "A Technical Writer creates documentation for software products, including user manuals, installation guides, and technical specifications."
+
+  utter_ask_about_scrum_master:
+    - text: "A Scrum Master facilitates the Agile development process, organizing and leading scrum meetings, removing obstacles, and ensuring the team follows Agile principles."
+
+  utter_ask_about_business_analyst:
+    - text: "A Business Analyst gathers and analyzes requirements from stakeholders, translating them into actionable tasks for the development team."
+
+  utter_ask_about_systems_analyst:
+    - text: "A Systems Analyst analyzes existing systems within an organization, identifying opportunities for improvement or optimization to meet business needs."
+
+  utter_ask_about_product_owner:
+    - text: "A Product Owner represents stakeholders in the development process, prioritizing the backlog, defining user stories, and accepting the work done by the development team."
+
+# --------------------------------------------
+  utter_ai_ml:
+    - text: "In artificial intelligence and machine learning, job roles encompass Machine Learning Engineer, Data Scientist, AI Researcher, and AI/ML Developer. The required skills include a strong understanding of machine learning algorithms and concepts, proficiency in programming languages like Python, R, experience with libraries and frameworks such as TensorFlow, PyTorch, scikit-learn, data preprocessing, visualization, knowledge of statistics, probability, and understanding of neural networks and deep learning."
+
+  utter_ask_about_ml_engineer:
+    - text: "A Machine Learning Engineer is responsible for developing, deploying, and maintaining machine learning models to solve complex problems."
+
+  utter_ask_about_data_scientist:
+    - text: "A Data Scientist analyzes large datasets to extract insights and build predictive models to support business decisions."
+
+  utter_ask_about_ai_research_scientist:
+    - text: "An AI Research Scientist conducts research in artificial intelligence, exploring new algorithms and techniques to advance the field."
+
+  utter_ask_about_ml_solutions_architect:
+    - text: "An AI/ML Solutions Architect designs and implements end-to-end AI/ML solutions to address business challenges and opportunities."
+
+  utter_ask_about_ai_product_manager:
+    - text: "An AI/ML Product Manager defines the vision and strategy for AI/ML products, working closely with cross-functional teams to deliver value to customers."
+
+  utter_ask_about_ai_research_engineer:
+    - text: "An AI Research Engineer applies research findings to develop practical AI solutions, bridging the gap between academic research and real-world applications."
+
+  utter_ask_about_deep_learning_engineer:
+    - text: "A Deep Learning Engineer specializes in designing and implementing deep neural networks for tasks such as image recognition, speech recognition, and natural language processing."
+
+  utter_ask_about_computer_vision_engineer:
+    - text: "A Computer Vision Engineer develops algorithms and systems to analyze and interpret visual data, enabling applications such as object detection, image segmentation, and facial recognition."
+
+  utter_ask_about_nlp_engineer:
+    - text: "A Natural Language Processing (NLP) Engineer designs and implements algorithms to process and analyze natural language text, enabling applications such as sentiment analysis, chatbots, and machine translation."
+
+  utter_ask_about_ai_ops_engineer:
+    - text: "An AI/ML Operations Engineer builds and maintains infrastructure for deploying, scaling, and monitoring machine learning models in production environments."
+
+# -----------------------------------------------------
+  utter_cybersecurity:
+    - text: "In cybersecurity, job roles include Cybersecurity Analyst, Security Consultant, Information Security Analyst, and Ethical Hacker. The required skills are knowledge of cybersecurity principles, understanding of networking protocols, proficiency in programming languages like Python, C/C++, experience with security tools like Wireshark, Metasploit, knowledge of cryptography, problem-solving skills, and attention to detail."
+
+  utter_ask_about_security_analyst:
+    - text: "A Security Analyst is responsible for monitoring and analyzing security incidents, conducting threat assessments, and implementing security measures to protect an organization's assets."
+
+  utter_ask_about_penetration_tester:
+    - text: "A Penetration Tester, also known as an Ethical Hacker, simulates cyber attacks to identify vulnerabilities in systems, networks, and applications, and recommends remediation measures to enhance security."
+
+  utter_ask_about_security_engineer:
+    - text: "A Security Engineer designs, implements, and maintains security solutions to protect an organization's IT infrastructure, including firewalls, intrusion detection systems, and encryption protocols."
+
+  utter_ask_about_incident_responder:
+    - text: "An Incident Responder investigates and responds to security incidents, including breaches, malware infections, and unauthorized access, to contain and mitigate the impact on the organization."
+
+  utter_ask_about_security_consultant:
+    - text: "A Security Consultant provides expert advice and guidance to organizations on cybersecurity strategy, risk management, compliance, and incident response, often working on a project basis."
+
+  utter_ask_about_security_architect:
+    - text: "A Security Architect designs and implements secure IT architectures and systems, including networks, applications, and cloud environments, to ensure the confidentiality, integrity, and availability of data."
+
+  utter_ask_about_ciso:
+    - text: "A Chief Information Security Officer (CISO) is responsible for leading an organization's cybersecurity strategy, overseeing security operations, and ensuring compliance with regulatory requirements and industry standards."
+
+  utter_ask_about_forensic_analyst:
+    - text: "A Forensic Analyst investigates cybercrimes and security incidents, collects and analyzes digital evidence, and prepares reports for use in legal proceedings and incident response efforts."
+
+  utter_ask_about_soc_analyst:
+    - text: "A Security Operations Center (SOC) Analyst monitors and analyzes security events and alerts generated by security systems, investigates potential threats, and coordinates incident response activities."
+
+  utter_ask_about_security_compliance_analyst:
+    - text: "A Security Compliance Analyst ensures that an organization's security measures comply with relevant laws, regulations, and industry standards, and conducts audits and assessments to verify compliance."
+
+
+# -----------------------------------------------------------------------------
+  utter_data_science_bigdata:
+    - text: "In data science and big data, job roles include Data Scientist, Data Analyst, Big Data Engineer, and Business Intelligence Developer. The required skills are proficiency in programming languages such as Python, R, SQL, experience with big data technologies like Hadoop, Spark, data cleaning, preprocessing, statistical analysis, data visualization, machine learning, understanding of databases, and data warehousing."
+    
+  utter_ask_about_big_data_engineer:
+    - text: "A Big Data Engineer designs, builds, and maintains large-scale data processing systems, leveraging technologies like Hadoop, Spark, and Kafka."
+
+  utter_ask_about_data_analyst:
+    - text: "A Data Analyst interprets data and turns it into actionable insights by analyzing trends, patterns, and relationships within datasets."
+
+  utter_ask_about_machine_learning_engineer:
+    - text: "A Machine Learning Engineer develops and deploys machine learning models, leveraging algorithms and techniques to solve complex problems."
+
+  utter_ask_about_data_architect:
+    - text: "A Data Architect designs and implements data management solutions, ensuring data integrity, security, and accessibility."
+
+  utter_ask_about_bi_analyst:
+    - text: "A Business Intelligence Analyst uses data visualization and reporting tools to create dashboards and reports for decision-making purposes."
+
+  utter_ask_about_data_engineer:
+    - text: "A Data Engineer builds and maintains data pipelines, warehouses, and ETL processes to enable data-driven decision-making."
+
+  utter_ask_about_data_mining_engineer:
+    - text: "A Data Mining Engineer develops algorithms and techniques to extract useful information from large datasets, often using machine learning."
+
+  utter_ask_about_quantitative_analyst:
+    - text: "A Quantitative Analyst applies mathematical and statistical methods to financial and risk management problems, often in the finance industry."
+
+  utter_ask_about_data_visualization_specialist:
+    - text: "A Data Visualization Specialist creates visual representations of data to facilitate understanding and interpretation of complex datasets."
+
+
+
+
+# --------------------------------------------------------------
+  utter_cloud_computing:
+    - text: "In cloud computing, job roles include Cloud Architect, Cloud Engineer, DevOps Engineer, and Solutions Architect. The required skills are knowledge of cloud platforms such as AWS, Azure, Google Cloud, understanding of virtualization, containerization like Docker, Kubernetes, experience with scripting languages like Bash, PowerShell, networking concepts, security best practices, and automation skills."
+
+  utter_ask_about_cloud_solutions_architect:
+    - text: "A Cloud Solutions Architect designs and implements cloud-based solutions, ensuring they meet business requirements and adhere to best practices."
+
+  utter_ask_about_cloud_engineer:
+    - text: "A Cloud Engineer builds, deploys, and manages cloud infrastructure and services, optimizing performance and ensuring reliability."
+
+  utter_ask_about_cloud_consultant:
+    - text: "A Cloud Consultant provides expertise and guidance on cloud adoption, migration, and optimization strategies, helping organizations leverage cloud technology effectively."
+
+  utter_ask_about_cloud_administrator:
+    - text: "A Cloud Administrator is responsible for managing and maintaining cloud environments, including provisioning resources, monitoring performance, and ensuring security."
+
+  utter_ask_about_devops_engineer:
+    - text: "A DevOps Engineer automates the deployment and management of cloud infrastructure, streamlining development and operations processes for faster delivery."
+
+  utter_ask_about_cloud_security_engineer:
+    - text: "A Cloud Security Engineer implements security measures to protect cloud environments, including access controls, encryption, and threat detection."
+
+  utter_ask_about_cloud_data_engineer:
+    - text: "A Cloud Data Engineer designs and manages data pipelines and analytics solutions in the cloud, ensuring scalability, reliability, and performance."
+
+  utter_ask_about_cloud_network_engineer:
+    - text: "A Cloud Network Engineer designs and maintains network infrastructure in the cloud, optimizing connectivity, security, and performance."
+
+  utter_ask_about_cloud_operations_engineer:
+    - text: "A Cloud Operations Engineer monitors and manages cloud infrastructure and services, ensuring availability, reliability, and efficiency."
+
+  utter_ask_about_cloud_developer:
+    - text: "A Cloud Developer builds and deploys applications on cloud platforms, leveraging cloud-native technologies and services for scalable and resilient solutions."
+
+
+# --------------------------------------------------------------------------------
+  utter_mobile_app_development:
+    - text: "In mobile app development, job roles include Mobile App Developer (iOS/Android) and Mobile Software Engineer. The required skills are proficiency in programming languages such as Swift, Java, Kotlin, experience with mobile app development frameworks like Flutter, React Native, understanding of mobile UI/UX design principles, knowledge of mobile app architecture patterns, and problem-solving skills."
+
+  utter_ask_about_mobile_app_developer:
+    - text: "A Mobile App Developer designs and builds mobile applications for various platforms, such as iOS or Android, using programming languages like Swift, Kotlin, or Java."
+
+  utter_ask_about_ios_developer:
+    - text: "An iOS Developer specializes in developing mobile applications specifically for Apple's iOS platform, using languages like Swift or Objective-C and frameworks like UIKit or SwiftUI."
+
+  utter_ask_about_android_developer:
+    - text: "An Android Developer focuses on developing mobile applications for devices running the Android operating system, using languages like Java or Kotlin and frameworks like Android SDK or Jetpack."
+
+  utter_ask_about_mobile_app_architect:
+    - text: "A Mobile App Architect designs the overall architecture and structure of mobile applications, ensuring scalability, maintainability, and performance."
+
+  utter_ask_about_mobile_app_ui_ux_designer:
+    - text: "A Mobile App UI/UX Designer is responsible for designing the user interface and user experience of mobile applications, creating wireframes, prototypes, and UI assets."
+
+  utter_ask_about_mobile_app_tester:
+    - text: "A Mobile App Tester conducts testing of mobile applications to identify bugs, ensure functionality, and verify compliance with design and performance standards."
+
+  utter_ask_about_mobile_app_product_manager:
+    - text: "A Mobile App Product Manager oversees the development and lifecycle of a mobile application, defining requirements, prioritizing features, and coordinating development efforts."
+
+  utter_ask_about_mobile_app_project_manager:
+    - text: "A Mobile App Project Manager manages the execution of mobile app development projects, including planning, scheduling, budgeting, and resource allocation."
+
+  utter_ask_about_mobile_app_marketing_specialist:
+    - text: "A Mobile App Marketing Specialist develops and implements marketing strategies to promote mobile applications, increase user acquisition, and drive engagement."
+
+  utter_ask_about_mobile_app_support_engineer:
+    - text: "A Mobile App Support Engineer provides technical support for mobile applications, troubleshooting issues reported by users and ensuring app stability and performance."
+
+
+# --------------------------------------------------------------------------------
+  utter_web_development:
+    - text: "In web development, job roles include Web Developer, Frontend Developer, Backend Developer, and Full Stack Developer. The required skills are proficiency in web technologies such as HTML, CSS, JavaScript, experience with frontend frameworks like React, Angular, Vue.js, knowledge of backend technologies like Node.js, Django, Flask, understanding of web security best practices, and familiarity with RESTful APIs."
+  
+  utter_ask_about_frontend_developer:
+    - text: "A Frontend Developer specializes in building user interfaces and client-side functionality for websites, using languages like HTML, CSS, and JavaScript."
+
+  utter_ask_about_backend_developer:
+    - text: "A Backend Developer focuses on server-side development and database management for websites, using languages like Python, PHP, or Node.js."
+
+  utter_ask_about_fullstack_developer:
+    - text: "A Full-stack Developer is proficient in both frontend and backend development, capable of working on all aspects of web application development."
+
+  utter_ask_about_web_designer:
+    - text: "A Web Designer is responsible for creating visually appealing and user-friendly website designs, using tools like Adobe Photoshop, Illustrator, or Sketch."
+
+  utter_ask_about_uiux_designer:
+    - text: "A UI/UX Designer specializes in designing intuitive user interfaces and engaging user experiences for websites, focusing on usability and user satisfaction."
+
+  utter_ask_about_web_developer:
+    - text: "A Web Developer is involved in the development, implementation, and maintenance of websites, handling both frontend and backend tasks as needed."
+
+  utter_ask_about_web_architect:
+    - text: "A Web Architect designs the overall structure and architecture of web applications, ensuring scalability, security, and performance."
+
+  utter_ask_about_web_project_manager:
+    - text: "A Web Project Manager oversees the planning, execution, and delivery of website development projects, managing resources, timelines, and budgets."
+
+  utter_ask_about_web_qa_engineer:
+    - text: "A Web Quality Assurance Engineer is responsible for testing and ensuring the quality and functionality of websites, identifying and fixing bugs and issues."
+
+  utter_ask_about_web_content_manager:
+    - text: "A Web Content Manager is in charge of creating, organizing, and managing website content, ensuring it aligns with the website's goals and target audience."
+
+
+
+# ------------------------------------------------------------------------------------------------
+  utter_database_management:
+    - text: "In database management, job roles include Database Administrator (DBA), Database Developer, and Data Architect. The required skills are proficiency in database languages like SQL, PL/SQL, experience with database management systems like MySQL, PostgreSQL, MongoDB, understanding of database design principles, knowledge of data warehousing, data modeling, and troubleshooting skills."
+
+  utter_ask_about_dba:
+    - text: "A Database Administrator (DBA) is responsible for managing and maintaining database systems, including installation, configuration, monitoring, and performance tuning."
+
+  utter_ask_about_database_developer:
+    - text: "A Database Developer focuses on designing and implementing database solutions, including database schema design, SQL querying, stored procedure development, and optimization."
+
+  utter_ask_about_database_analyst:
+    - text: "A Database Analyst analyzes data stored in databases to extract insights and provide reports for decision-making purposes, often using SQL and data analysis tools."
+
+  utter_ask_about_data_engineers:
+    - text: "A Data Engineer designs, builds, and maintains data pipelines and infrastructure for large-scale data processing and analytics, using technologies like Hadoop, Spark, and data warehouses."
+
+  utter_ask_about_data_warehouse_manager:
+    - text: "A Data Warehouse Manager oversees the development, maintenance, and optimization of data warehouse systems, ensuring data quality, security, and performance."
+
+  utter_ask_about_database_security_specialist:
+    - text: "A Database Security Specialist focuses on securing database systems and data assets from unauthorized access, breaches, and cyber threats, implementing security policies and controls."
+
+  utter_ask_about_database_performance_analyst:
+    - text: "A Database Performance Analyst monitors and optimizes database performance, identifying bottlenecks, tuning queries, and improving system scalability and reliability."
+
+  utter_ask_about_database_consultant:
+    - text: "A Database Consultant provides expertise and guidance on database-related projects, offering advice on database design, performance optimization, and best practices."
+
+  utter_ask_about_data_governance_manager:
+    - text: "A Data Governance Manager develops and implements data governance policies and procedures to ensure data quality, security, and compliance across the organization."
+
+
+# --------------------------------------------------------
+  utter_networking:
+    - text: "In networking, job roles include Network Engineer, Network Administrator, and Systems Administrator. The required skills are knowledge of networking concepts like TCP/IP, DNS, DHCP, experience with network equipment like routers, switches, understanding of network security principles, troubleshooting skills, and knowledge of network protocols."
+  
+  utter_ask_about_network_engineer:
+    - text: "A Network Engineer designs, implements, and maintains computer networks, including LANs, WANs, and WLANs. They are responsible for network configuration, troubleshooting, and optimization."
+
+  utter_ask_about_network_administrator:
+    - text: "A Network Administrator manages and maintains an organization's network infrastructure. They handle network configuration, monitoring, security, and troubleshooting."
+
+  utter_ask_about_network_security_engineer:
+    - text: "A Network Security Engineer specializes in securing computer networks against cyber threats. They implement security measures, configure firewalls, and monitor network traffic for suspicious activities."
+
+  utter_ask_about_systems_administrator:
+    - text: "A Systems Administrator is responsible for managing and maintaining an organization's IT systems, including servers, operating systems, and software applications."
+
+  utter_ask_about_network_architect:
+    - text: "A Network Architect designs and plans the layout of computer networks. They create network diagrams, specify hardware and software components, and ensure network scalability and performance."
+
+  utter_ask_about_network_analyst:
+    - text: "A Network Analyst analyzes and troubleshoots network problems, monitors network performance, and recommends solutions to optimize network efficiency."
+
+  utter_ask_about_noc_technician:
+    - text: "A Network Operations Center (NOC) Technician monitors network systems, responds to alarms and alerts, and troubleshoots network issues to ensure uninterrupted network operation."
+
+  utter_ask_about_wireless_network_engineer:
+    - text: "A Wireless Network Engineer specializes in designing, deploying, and managing wireless networks. They configure wireless access points, optimize coverage, and troubleshoot connectivity issues."
+
+
+  utter_ask_about_network_support_specialist:
+    - text: "A Network Support Specialist provides technical support for network infrastructure and end-users. They diagnose and resolve network issues, install network equipment, and ensure network reliability and availability."
+
+
+# -----------------------------------------------------------------------------------
+  utter_embedded_systems:
+    - text: "In embedded systems, job roles include Embedded Systems Engineer, Firmware Engineer, and Embedded Software Developer. The required skills are proficiency in programming languages like C, C++, understanding of microcontrollers, microprocessors, experience with embedded development tools like IDEs, debuggers, knowledge of real-time operating systems (RTOS), electronics, and hardware knowledge."
+
+  utter_ask_about_embedded_systems_engineer:
+    - text: "An Embedded Systems Engineer designs, develops, and maintains embedded systems hardware and software. They work on microcontrollers, sensors, actuators, and communication interfaces to create embedded solutions for various applications."
+
+  utter_ask_about_firmware_engineer:
+    - text: "A Firmware Engineer is responsible for developing low-level software that controls the hardware of embedded systems. They write code that interfaces with hardware components and implements system functionality."
+
+  utter_ask_about_embedded_software_developer:
+    - text: "An Embedded Software Developer writes and debugs software that runs on embedded systems. They work with programming languages like C/C++ and may develop device drivers, application software, and firmware."
+
+  utter_ask_about_hardware_engineer:
+    - text: "A Hardware Engineer designs and develops the physical components of embedded systems, including circuit boards, processors, memory, and peripherals. They work on schematic design, PCB layout, and hardware testing."
+
+  utter_ask_about_embedded_systems_architect:
+    - text: "An Embedded Systems Architect designs the overall structure and functionality of embedded systems solutions. They define system requirements, select hardware and software components, and ensure system scalability and performance."
+
+  utter_ask_about_embedded_systems_tester:
+    - text: "An Embedded Systems Tester verifies and validates embedded systems to ensure they meet quality and performance standards. They design test cases, perform testing, and analyze results to identify defects and improve system reliability."
+
+  utter_ask_about_system_integration_engineer:
+    - text: "A System Integration Engineer integrates hardware and software components into embedded systems. They ensure compatibility, functionality, and reliability by testing and debugging system interactions."
+
+  utter_ask_about_real_time_systems_engineer:
+    - text: "A Real-Time Systems Engineer designs and develops embedded systems that must respond to events within strict timing constraints. They work on real-time operating systems, scheduling algorithms, and performance optimization."
+
+  utter_ask_about_embedded_systems_project_manager:
+    - text: "An Embedded Systems Project Manager oversees the planning, execution, and delivery of embedded systems projects. They coordinate resources, manage schedules and budgets, and communicate with stakeholders to ensure project success."
+
+  utter_ask_about_embedded_systems_consultant:
+    - text: "An Embedded Systems Consultant provides expertise and guidance on embedded systems design, development, and implementation. They offer advice on technology selection, system architecture, and best practices."
+
+
+
+actions:
+  - utter_ask_role_responsibilities
+  - utter_ask_stakeholder_management
+  - utter_ask_market_research
+  - utter_ask_product_strategy
+  - utter_ask_roadmap_creation
+  - utter_ask_agile_methodology
+  - utter_ask_user_testing
+  - utter_ask_go_to_market_strategy
+  - utter_ask_post_launch_activities
+  - utter_ask_long_term_strategy
+  - utter_ask_tools_and_techniques
+  - utter_ask_skills_development
+  - utter_ask_miscellaneous
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
