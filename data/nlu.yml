@@ -479,6 +479,63 @@ nlu:
       - Explain what a Scrum Master does.
       - What are the responsibilities of a Scrum Master?
 
+      
+  - intent: ask_about_agile_coach
+    examples: |
+      - Can you tell me about the role of an Agile Coach?
+      - What does an Agile Coach do?
+      - Explain the responsibilities of an Agile Coach.
+
+  - intent: ask_about_product_owner
+    examples: |
+      - What is the role of a Product Owner?
+      - Explain what a Product Owner does.
+      - What are the responsibilities of a Product Owner?
+
+  - intent: ask_about_release_train_engineer
+    examples: |
+      - Can you tell me about the role of a Release Train Engineer?
+      - What does a Release Train Engineer do?
+      - Explain the responsibilities of a Release Train Engineer.
+
+  - intent: ask_about_agile_project_manager
+    examples: |
+      - What is the role of an Agile Project Manager?
+      - Explain what an Agile Project Manager does.
+      - What are the responsibilities of an Agile Project Manager?
+
+  - intent: ask_about_scrum_team_member
+    examples: |
+      - Can you tell me about the role of a Scrum Team Member?
+      - What does a Scrum Team Member do?
+      - Explain the responsibilities of a Scrum Team Member.
+
+  - intent: ask_about_agile_business_analyst
+    examples: |
+      - What is the role of an Agile Business Analyst?
+      - Explain what an Agile Business Analyst does.
+      - What are the responsibilities of an Agile Business Analyst?
+
+  - intent: ask_about_scrum_consultant
+    examples: |
+      - Can you tell me about the role of a Scrum Consultant?
+      - What does a Scrum Consultant do?
+      - Explain the responsibilities of a Scrum Consultant.
+
+  - intent: ask_about_agile_delivery_lead
+    examples: |
+      - What is the role of an Agile Delivery Lead?
+      - Explain what an Agile Delivery Lead does.
+      - What are the responsibilities of an Agile Delivery Lead?
+
+  - intent: ask_about_safe_program_consultant
+    examples: |
+      - Can you tell me about the role of a SAFe Program Consultant?
+      - What does a SAFe Program Consultant do?
+      - Explain the responsibilities of a SAFe Program Consultant.
+
+
+
   - intent: ask_about_business_analyst
     examples: |
       - Can you tell me about the role of a Business Analyst?
@@ -491,12 +548,7 @@ nlu:
       - Explain what a Systems Analyst does.
       - What are the responsibilities of a Systems Analyst?
 
-  - intent: ask_about_product_owner
-    examples: |
-      - Can you tell me about the role of a Product Owner?
-      - What does a Product Owner do?
-      - Explain the responsibilities of a Product Owner.
-    # ----------------------END--------------------------
+ # ----------------------END--------------------------
   # ---------------START--------------------------------------------
   - intent: ai_ml
     examples: |
@@ -709,12 +761,7 @@ nlu:
       - Explain the role of a Cloud Solutions Architect.
       - What are the responsibilities of a Cloud Solutions Architect?
 
-  - intent: ask_about_cloud_engineers
-    examples: |
-      - Can you tell me about the role of a Cloud Engineer?
-      - What does a Cloud Engineer do?
-      - Explain the responsibilities of a Cloud Engineer.
-
+  
   - intent: ask_about_cloud_consultant
     examples: |
       - What is the role of a Cloud Consultant?
@@ -732,6 +779,55 @@ nlu:
       - What is the role of a DevOps Engineer in cloud computing?
       - Explain what a DevOps Engineer does in cloud environments.
       - What are the responsibilities of a DevOps Engineer in cloud?
+
+  - intent: ask_about_sre
+    examples: |
+      - Can you tell me about the role of a Site Reliability Engineer?
+      - What does an SRE do?
+      - Explain the responsibilities of a Site Reliability Engineer.
+
+  - intent: ask_about_cloud_engineer
+    examples: |
+      - What is the role of a Cloud Engineer?
+      - Explain what a Cloud Engineer does.
+      - What are the responsibilities of a Cloud Engineer?
+
+  - intent: ask_about_release_manager
+    examples: |
+      - Can you tell me about the role of a Release Manager?
+      - What does a Release Manager do?
+      - Explain the responsibilities of a Release Manager.
+
+  - intent: ask_about_automation_engineer
+    examples: |
+      - What is the role of an Automation Engineer?
+      - Explain what an Automation Engineer does.
+      - What are the responsibilities of an Automation Engineer?
+
+  - intent: ask_about_infrastructure_engineer
+    examples: |
+      - What is the role of an Infrastructure Engineer?
+      - Explain what an Infrastructure Engineer does.
+      - What are the responsibilities of an Infrastructure Engineer?
+
+  
+  - intent: ask_about_build_engineer
+    examples: |
+      - What is the role of a Build Engineer?
+      - Explain what a Build Engineer does.
+      - What are the responsibilities of a Build Engineer?
+
+  - intent: ask_about_system_administrator
+    examples: |
+      - What is the role of a System Administrator?
+      - Explain what a System Administrator does.
+      - What are the responsibilities of a System Administrator?
+
+  - intent: ask_about_cicd_engineer
+    examples: |
+      - What is the role of a CI/CD Engineer?
+      - Explain what a CI/CD Engineer does.
+      - What are the responsibilities of a CI/CD Engineer?
 
   - intent: ask_about_cloud_security_engineer
     examples: |

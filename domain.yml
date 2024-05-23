@@ -66,9 +66,18 @@ intents:
   - ask_about_ui_designer
   - ask_about_technical_writer
   - ask_about_scrum_master
+  - ask_about_agile_coach
+  - ask_about_product_owner
+  - ask_about_release_train_engineer
+  - ask_about_agile_project_manager
+  - ask_about_scrum_team_member
+  - ask_about_agile_business_analyst
+  - ask_about_scrum_consultant
+  - ask_about_agile_delivery_lead
+  - ask_about_safe_program_consultant
   - ask_about_business_analyst
   - ask_about_systems_analyst
-  - ask_about_product_owner
+  
 
   - ai_ml
   - ask_about_ml_engineer
@@ -107,10 +116,19 @@ intents:
 
   - cloud_computing
   - ask_about_cloud_solutions_architect
-  - ask_about_cloud_engineers
   - ask_about_cloud_consultant
   - ask_about_cloud_administrator
+
   - ask_about_devops_engineer
+  - ask_about_sre
+  - ask_about_cloud_engineer
+  - ask_about_release_manager
+  - ask_about_automation_engineer
+  - ask_about_infrastructure_engineer
+  - ask_about_build_engineer
+  - ask_about_system_administrator
+  - ask_about_cicd_engineer
+
   - ask_about_cloud_security_engineer
   - ask_about_cloud_data_engineer
   - ask_about_cloud_operations_engineer
@@ -470,15 +488,41 @@ responses:
   utter_ask_about_scrum_master:
     - text: "A Scrum Master facilitates the Agile development process, organizing and leading scrum meetings, removing obstacles, and ensuring the team follows Agile principles."
 
+  utter_ask_about_agile_coach:
+    - text: "An Agile Coach mentors teams and organizations in Agile practices, helps with Agile transformations, and facilitates workshops and training sessions."
+
+  utter_ask_about_product_owner:
+    - text: "A Product Owner is responsible for defining product vision, creating and managing the product backlog, and ensuring the development team delivers value to the business."
+
+  utter_ask_about_release_train_engineer:
+    - text: "A Release Train Engineer facilitates program-level processes and execution, escalates impediments, manages risks, and helps ensure value delivery in a SAFe framework."
+
+  utter_ask_about_agile_project_manager:
+    - text: "An Agile Project Manager oversees project execution using Agile methodologies, coordinates between teams, manages project timelines, and ensures successful project delivery."
+
+  utter_ask_about_scrum_team_member:
+    - text: "A Scrum Team Member collaborates with the team to deliver increments of product functionality, participates in Scrum ceremonies, and continuously improves their skills."
+
+  utter_ask_about_agile_business_analyst:
+    - text: "An Agile Business Analyst gathers and analyzes requirements, creates user stories, collaborates with stakeholders, and ensures the development team understands the business needs."
+
+  utter_ask_about_scrum_consultant:
+    - text: "A Scrum Consultant provides expertise in Scrum practices, helps teams adopt Agile methodologies, and guides organizations through Agile transformations."
+
+  utter_ask_about_agile_delivery_lead:
+    - text: "An Agile Delivery Lead ensures the successful delivery of Agile projects, manages the delivery team, coordinates with stakeholders, and implements continuous delivery practices."
+
+  utter_ask_about_safe_program_consultant:
+    - text: "A SAFe Program Consultant trains and coaches organizations in the SAFe framework, helps with scaling Agile practices, and facilitates SAFe certification workshops."
+
+
   utter_ask_about_business_analyst:
     - text: "A Business Analyst gathers and analyzes requirements from stakeholders, translating them into actionable tasks for the development team."
 
   utter_ask_about_systems_analyst:
     - text: "A Systems Analyst analyzes existing systems within an organization, identifying opportunities for improvement or optimization to meet business needs."
 
-  utter_ask_about_product_owner:
-    - text: "A Product Owner represents stakeholders in the development process, prioritizing the backlog, defining user stories, and accepting the work done by the development team."
-
+  
 # --------------------------------------------
   utter_ai_ml:
     - text: "In artificial intelligence and machine learning, job roles encompass Machine Learning Engineer, Data Scientist, AI Researcher, and AI/ML Developer. The required skills include a strong understanding of machine learning algorithms and concepts, proficiency in programming languages like Python, R, experience with libraries and frameworks such as TensorFlow, PyTorch, scikit-learn, data preprocessing, visualization, knowledge of statistics, probability, and understanding of neural networks and deep learning."
@@ -600,6 +644,32 @@ responses:
 
   utter_ask_about_devops_engineer:
     - text: "A DevOps Engineer automates the deployment and management of cloud infrastructure, streamlining development and operations processes for faster delivery."
+
+  utter_ask_about_sre:
+    - text: "A Site Reliability Engineer (SRE) focuses on system reliability, scalability, and performance, using monitoring tools and automation to manage and improve system uptime and performance."
+
+ 
+  utter_ask_about_release_manager:
+    - text: "A Release Manager coordinates the release of software updates, manages version control, and ensures that releases are delivered on time and with high quality."
+
+  utter_ask_about_automation_engineer:
+    - text: "An Automation Engineer develops scripts and tools to automate repetitive tasks, manages infrastructure as code, and works with CI/CD pipelines to improve efficiency and reliability."
+
+  utter_ask_about_infrastructure_engineer:
+    - text: "An Infrastructure Engineer manages physical and virtual infrastructure, including networking, servers, and storage, ensuring they are optimized for performance and reliability."
+
+
+  utter_ask_about_build_engineer:
+    - text: "A Build Engineer manages the build process, optimizes build performance, and ensures that software builds are reproducible, reliable, and efficient using tools like Maven and Gradle."
+
+  utter_ask_about_system_administrator:
+    - text: "A System Administrator manages and monitors servers and operating systems, handles user accounts and permissions, and ensures the availability and security of IT systems."
+
+  utter_ask_about_cicd_engineer:
+    - text: "A CI/CD Engineer designs and maintains continuous integration and continuous deployment pipelines, ensuring that code changes are automatically tested and deployed using tools like Jenkins and GitLab CI."
+
+
+
 
   utter_ask_about_cloud_security_engineer:
     - text: "A Cloud Security Engineer implements security measures to protect cloud environments, including access controls, encryption, and threat detection."

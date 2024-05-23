@@ -293,19 +293,6 @@ stories:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   - story: UI Designer Role
     steps:
       - intent: ask_about_ui_designer
@@ -321,6 +308,53 @@ stories:
       - intent: ask_about_scrum_master
       - action: utter_ask_about_scrum_master
 
+        
+  - story: Agile Coach Role
+    steps:
+    - intent: ask_about_agile_coach
+    - action: utter_ask_about_agile_coach
+
+  - story: Product Owner Role
+    steps:
+    - intent: ask_about_product_owner
+    - action: utter_ask_about_product_owner
+
+  - story: Release Train Engineer Role
+    steps:
+    - intent: ask_about_release_train_engineer
+    - action: utter_ask_about_release_train_engineer
+
+  - story: Agile Project Manager Role
+    steps:
+    - intent: ask_about_agile_project_manager
+    - action: utter_ask_about_agile_project_manager
+
+  - story: Scrum Team Member Role
+    steps:
+    - intent: ask_about_scrum_team_member
+    - action: utter_ask_about_scrum_team_member
+
+  - story: Agile Business Analyst Role
+    steps:
+    - intent: ask_about_agile_business_analyst
+    - action: utter_ask_about_agile_business_analyst
+
+  - story: Scrum Consultant Role
+    steps:
+    - intent: ask_about_scrum_consultant
+    - action: utter_ask_about_scrum_consultant
+
+  - story: Agile Delivery Lead Role
+    steps:
+    - intent: ask_about_agile_delivery_lead
+    - action: utter_ask_about_agile_delivery_lead
+
+  - story: SAFe Program Consultant Role
+    steps:
+    - intent: ask_about_safe_program_consultant
+    - action: utter_ask_about_safe_program_consultant
+
+
   - story: Business Analyst Role
     steps:
       - intent: ask_about_business_analyst
@@ -331,10 +365,7 @@ stories:
       - intent: ask_about_systems_analyst
       - action: utter_ask_about_systems_analyst
 
-  - story: Product Owner Role
-    steps:
-      - intent: ask_about_product_owner
-      - action: utter_ask_about_product_owner
+  
   # ---------------END-----------------------------------------------
   # -----------START----------------------------------------------
   - story: ai_ml
@@ -512,11 +543,7 @@ stories:
       - intent: ask_about_cloud_solutions_architect
       - action: utter_ask_about_cloud_solutions_architect
 
-  - story: Cloud Engineer Role
-    steps:
-      - intent: ask_about_cloud_engineers
-      - action: utter_ask_about_cloud_engineer
-
+ 
   - story: Cloud Consultant Role
     steps:
       - intent: ask_about_cloud_consultant
@@ -531,6 +558,47 @@ stories:
     steps:
       - intent: ask_about_devops_engineer
       - action: utter_ask_about_devops_engineer
+        
+  - story: SRE Role
+    steps:
+    - intent: ask_about_sre
+    - action: utter_ask_about_sre
+
+  - story: Cloud Engineer Role
+    steps:
+    - intent: ask_about_cloud_engineer
+    - action: utter_ask_about_cloud_engineer
+
+  - story: Release Manager Role
+    steps:
+    - intent: ask_about_release_manager
+    - action: utter_ask_about_release_manager
+
+  - story: Automation Engineer Role
+    steps:
+    - intent: ask_about_automation_engineer
+    - action: utter_ask_about_automation_engineer
+
+  - story: Infrastructure Engineer Role
+    steps:
+    - intent: ask_about_infrastructure_engineer
+    - action: utter_ask_about_infrastructure_engineer
+
+ 
+  - story: Build Engineer Role
+    steps:
+    - intent: ask_about_build_engineer
+    - action: utter_ask_about_build_engineer
+
+  - story: System Administrator Role
+    steps:
+    - intent: ask_about_system_administrator
+    - action: utter_ask_about_system_administrator
+
+  - story: CI/CD Engineer Role
+    steps:
+    - intent: ask_about_cicd_engineer
+    - action: utter_ask_about_cicd_engineer
 
   - story: Cloud Security Engineer Role
     steps:
