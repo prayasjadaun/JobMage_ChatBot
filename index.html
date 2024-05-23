@@ -1,213 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobmage Bot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+      .chat-container {
+        width: 95vw;
+        max-width: 450px;
+        height: 90vh;
+        max-height: 700px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .chat-header {
+        background: linear-gradient(90deg, #0078ff, #00c6ff);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .chat-header .icon {
+        margin-right: 10px;
+      }
+      .chat-box {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+      }
+      .chat-box div {
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        max-width: 75%;
+        position: relative;
+      }
+      .chat-box .user-message {
+        background: #0078ff;
+        color: white;
+        align-self: flex-end;
+        text-align: right;
+      }
+      .chat-box .user-message::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent #0078ff;
+      }
+      .chat-box .bot-message {
+        background: #e5e5ea;
+        color: black;
+        align-self: flex-start;
+        text-align: left;
+      }
+      .chat-box .bot-message::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent #e5e5ea transparent transparent;
+      }
+      .chat-input-container {
+        display: flex;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        background: #fff;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .chat-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        margin-right: 10px;
+        transition: box-shadow 0.3s ease;
+        font-size: 16px;
+      }
+      .chat-input:focus {
+        box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
+        outline: none;
+      }
+      .send-btn {
+        padding: 10px 20px;
+        background: #0078ff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .send-btn:hover {
+        background: #005bb5;
+      }
+      @media (max-width: 600px) {
         .chat-container {
-            width: 95vw;
-            max-width: 450px;
-            height: 90vh;
-            max-height: 700px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .chat-header {
-            background: linear-gradient(90deg, #0078ff, #00c6ff);
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-        .chat-header .icon {
-            margin-right: 10px;
-        }
-        .chat-box {
-            flex: 1;
-            padding: 10px;
-            overflow-y: auto;
-            background: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            scroll-behavior: smooth;
-        }
-        .chat-box div {
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 20px;
-            max-width: 75%;
-            position: relative;
-        }
-        .chat-box .user-message {
-            background: #0078ff;
-            color: white;
-            align-self: flex-end;
-            text-align: right;
-        }
-        .chat-box .user-message::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -10px;
-            transform: translateY(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent transparent #0078ff;
-        }
-        .chat-box .bot-message {
-            background: #e5e5ea;
-            color: black;
-            align-self: flex-start;
-            text-align: left;
-        }
-        .chat-box .bot-message::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -10px;
-            transform: translateY(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent #e5e5ea transparent transparent;
+          width: 100vw;
+          height: 100vh;
+          border-radius: 0;
         }
         .chat-input-container {
-            display: flex;
-            border-top: 1px solid #ccc;
-            padding: 10px;
-            background: #fff;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+          flex-direction: column;
+          padding: 5px;
         }
         .chat-input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            margin-right: 10px;
-            transition: box-shadow 0.3s ease;
-            font-size: 16px;
-        }
-        .chat-input:focus {
-            box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
-            outline: none;
+          margin: 0 0 10px 0;
         }
         .send-btn {
-            padding: 10px 20px;
-            background: #0078ff;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          width: 100%;
+          padding: 10px 0;
         }
-        .send-btn:hover {
-            background: #005bb5;
-        }
-        @media (max-width: 600px) {
-            .chat-container {
-                width: 100vw;
-                height: 100vh;
-                border-radius: 0;
-            }
-            .chat-input-container {
-                flex-direction: column;
-                padding: 5px;
-            }
-            .chat-input {
-                margin: 0 0 10px 0;
-            }
-            .send-btn {
-                width: 100%;
-                padding: 10px 0;
-            }
-        }
-         #chatbot-icon {
+      }
+      #chatbot-icon {
         position: fixed;
-        bottom: 20px; /* Adjust this value to change the vertical position */
-        right: 20px; /* Adjust this value to change the horizontal position */
-        width: 60px; /* Adjust the width of the icon */
+        bottom: 20px; 
+        right: 20px; 
+        width: 60px; 
         height: auto;
         cursor: pointer;
-        z-index: 9999; /* Make sure the icon stays on top of other elements */
-    }
+        z-index: 9999; 
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="chat-container">
-        <div class="chat-header">
-            <i class="fas fa-robot icon"></i> Phoenix
-        </div>
-        <div class="chat-box" id="chat-box"></div>
-        <div class="chat-input-container">
-            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message here...">
-            <button class="send-btn" id="send-btn">Send</button>
-        </div>
+      <div class="chat-header"><i class="fas fa-robot icon"></i> Phoenix</div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input-container">
+        <input
+          type="text"
+          id="chat-input"
+          class="chat-input"
+          placeholder="Type your message here..."
+        />
+        <button class="send-btn" id="send-btn">Send</button>
+      </div>
     </div>
     <script>
-        const sendMessage = () => {
-            const userMessage = document.getElementById('chat-input').value;
-            const chatBox = document.getElementById('chat-box');
-            if (userMessage.trim()) {
-                const userMessageElement = document.createElement('div');
-                userMessageElement.innerText = userMessage;
-                userMessageElement.classList.add('user-message');
-                chatBox.appendChild(userMessageElement);
-                
-                fetch('/chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ message: userMessage })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const botMessage = data[0].text;
-                    const botMessageElement = document.createElement('div');
-                    botMessageElement.innerText = botMessage;
-                    botMessageElement.classList.add('bot-message');
-                    chatBox.appendChild(botMessageElement);
-                    document.getElementById('chat-input').value = '';
-                    chatBox.scrollTop = chatBox.scrollHeight;
-                })
-                .catch(error => console.error('Error:', error));
-            }
-        };
+      const sendMessage = () => {
+        const userMessage = document.getElementById("chat-input").value;
+        const chatBox = document.getElementById("chat-box");
+        if (userMessage.trim()) {
+          const userMessageElement = document.createElement("div");
+          userMessageElement.innerText = userMessage;
+          userMessageElement.classList.add("user-message");
+          chatBox.appendChild(userMessageElement);
 
-        document.getElementById('send-btn').addEventListener('click', sendMessage);
-        document.getElementById('chat-input').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
+          fetch("/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message: userMessage }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const botMessage = data[0].text;
+              const botMessageElement = document.createElement("div");
+              botMessageElement.innerText = botMessage;
+              botMessageElement.classList.add("bot-message");
+              chatBox.appendChild(botMessageElement);
+              document.getElementById("chat-input").value = "";
+              chatBox.scrollTop = chatBox.scrollHeight;
+            })
+            .catch((error) => console.error("Error:", error));
+        }
+      };
+
+      document
+        .getElementById("send-btn")
+        .addEventListener("click", sendMessage);
+      document
+        .getElementById("chat-input")
+        .addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            sendMessage();
+          }
         });
-        
     </script>
-</body>
+  </body>
 </html>
