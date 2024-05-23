@@ -9,9 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        font-family: "Quicksand", sans-serif;
+        background-color: #121212;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,75 +21,69 @@
         margin: 0;
         overflow: hidden;
       }
+
       .chat-container {
         width: 95vw;
-        max-width: 450px;
-        height: 90vh;
+        max-width: 500px;
+        height: 85vh;
         max-height: 700px;
-        border: 1px solid #ccc;
         border-radius: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        background: #1e1e1e;
         display: flex;
         flex-direction: column;
         overflow: hidden;
       }
+
       .chat-header {
-        background: #00f260; 
-        background: -webkit-linear-gradient(
-          to right,
-          #0575e6,
-          #00f260
-        ); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #0575e6, #00f260);
-        color: white;
-        padding: 15px;
+        background: #3e64ff;
+        color: #fff;
+        padding: 20px;
         text-align: center;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
       }
+
       .chat-header .icon {
         margin-right: 10px;
       }
+
       .chat-box {
         flex: 1;
-        padding: 10px;
+        padding: 20px;
         overflow-y: auto;
-        background: #f9f9f9;
+        background: #2e2e2e;
         display: flex;
         flex-direction: column;
         scroll-behavior: smooth;
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
       }
-      .chat-box div {
-        margin-bottom: 10px;
-        padding: 10px 15px;
-        border-radius: 20px;
-        max-width: 75%;
-        position: relative;
-      }
-      .chat-box .user-message {  
-        background: #00b4db; 
-        background: -webkit-linear-gradient(
-          to right,
-          #0083b0,
-          #00b4db
-        ); 
-        background: linear-gradient(
-          to right,
-          #0083b0,
-          #00b4db
-        ); 
 
-        color: white;
-        align-self: flex-end;
-        text-align: right;
+      .chat-box::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
       }
-      .chat-box .user-message::after {
+
+      .chat-box div {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 20px;
+        position: relative;
+        animation: fadeIn 0.5s;
+      }
+
+      .user-message {
+        background: linear-gradient(135deg, #3e64ff, #00c9ff);
+        color: #fff;
+        align-self: flex-end;
+      }
+
+      .user-message::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -95,26 +91,18 @@
         transform: translateY(-50%);
         border-width: 10px;
         border-style: solid;
-        border-color: transparent transparent transparent #0078ff;
+        border-color: transparent transparent transparent #3e64ff;
       }
-      .chat-box .bot-message {
-        background: #11998e; 
-        background: -webkit-linear-gradient(
-          to right,
-          #38ef7d,
-          #11998e
-        ); 
-        background: linear-gradient(
-          to right,
-          #38ef7d,
-          #11998e
-        ); 
 
-        color: black;
+      .bot-message {
+        width: 70%;
+        background: linear-gradient(135deg, #ff5f6d, #ffc371);
+        color: #fff;
         align-self: flex-start;
-        text-align: left;
       }
-      .chat-box .bot-message::after {
+
+      .bot-message::after {
+        width: 50%;
         content: "";
         position: absolute;
         top: 50%;
@@ -122,74 +110,81 @@
         transform: translateY(-50%);
         border-width: 10px;
         border-style: solid;
-        border-color: transparent #e5e5ea transparent transparent;
+        border-color: transparent #ff5f6d transparent transparent;
       }
+
       .chat-input-container {
         display: flex;
-        border-top: 1px solid #ccc;
-        padding: 10px;
-        background: #fff;
+        padding: 15px;
+        background: #1e1e1e;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
       }
+
       .chat-input {
         flex: 1;
-        padding: 10px;
-        border: 1px solid #ccc;
+        padding: 15px;
+        border: none;
         border-radius: 20px;
         margin-right: 10px;
-        transition: box-shadow 0.3s ease;
         font-size: 16px;
-      }
-      .chat-input:focus {
-        box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
+        background: #2e2e2e;
+        color: #fff;
         outline: none;
       }
-      .send-btn {
-        padding: 10px 20px;
-        background: #00f260; 
-        background: -webkit-linear-gradient(
-          to right,
-          #0575e6,
-          #00f260
-        ); 
-        background: linear-gradient(
-          to right,
-          #0575e6,
-          #00f260
-        ); 
 
-        color: white;
+      .send-btn {
+        padding: 15px 25px;
+        background: #3e64ff;
+        color: #fff;
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        transition: background 0.3s ease;
         font-size: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
+        outline: none;
+        transition: background 0.3s ease;
       }
+
       .send-btn:hover {
-        background: #005bb5;
+        background: #1e4bff;
       }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       @media (max-width: 600px) {
         .chat-container {
           width: 100vw;
           height: 100vh;
           border-radius: 0;
         }
+
         .chat-input-container {
           flex-direction: column;
-          padding: 5px;
+          padding: 10px;
         }
+
         .chat-input {
           margin: 0 0 10px 0;
         }
+
         .send-btn {
           width: 100%;
-          padding: 10px 0;
+          padding: 15px 0;
         }
       }
+
       #chatbot-icon {
         position: fixed;
         bottom: 20px;
@@ -203,14 +198,14 @@
   </head>
   <body>
     <div class="chat-container">
-      <div class="chat-header"><i class="fas fa-robot icon"></i>Phoenix</div>
+      <div class="chat-header"><i class="fas fa-robot icon"></i>Jobmage</div>
       <div class="chat-box" id="chat-box"></div>
       <div class="chat-input-container">
         <input
           type="text"
           id="chat-input"
           class="chat-input"
-          placeholder="Type your message here..."
+          placeholder="Ask me anything..."
         />
         <button class="send-btn" id="send-btn">Send</button>
       </div>

@@ -47,6 +47,7 @@ intents:
   - ask_usability_testing
   - ask_information_architecture
   - ask_portfolio
+
   - ask_about_qa_tester
   - ask_qa_tester_skills
   - ask_qa_tester_roadmap
@@ -77,6 +78,20 @@ intents:
   - ask_about_safe_program_consultant
   - ask_about_business_analyst
   - ask_about_systems_analyst
+
+
+  - ask_about_flutter_developer
+  - ask_about_flutter_skills
+  - ask_about_flutter_tools
+  - ask_about_flutter_framework
+  - ask_about_flutter_projects
+  - ask_about_flutter_performance
+  - ask_about_flutter_integration
+  - ask_about_flutter_testing
+  - ask_about_flutter_cicd
+  - ask_about_flutter_career
+  - ask_about_flutter_community
+  - ask_about_flutter_future
   
 
   - ai_ml
@@ -281,7 +296,24 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Hey! How can i help you today?"
+    - text: "Hey! I am Pheonix.\nI am a Jobmage bot.\n Only recommended job roles.\n
+    \n
+    Here are some domains for career guidance\n
+    1. Software Development\n
+    2. UX Designer\n
+    3. QA Tester\n
+    4. UI Designer\n
+    5. AI & ML\n
+    6. Cyber Security\n
+    7. Data Science Bigdata\n
+    8. Cloud Computing\n
+    9. Mobile App Development\n
+    10. Web Development\n
+    11. Database Management\n
+    12. Networking\n
+    13. Flutter Development\n
+    14. Embedded Systems"
+
 
   utter_cheer_up:
     - text: "Here is something to cheer you up:"
@@ -305,7 +337,7 @@ responses:
 
 
   utter_software_development:
-    - text: "In software development, job roles include 1. Product Manager 2. Project Manager 3. Quality Assurance (QA) Tester 4. User Experience (UX) Designer 5. User Interface (UI) Designer 6. Technical Writer 7. Scrum Master 8. Business Analyst 9. Systems Analyst 10. Product Owner. and The required skills are proficiency in programming languages such as Java, Python, JavaScript, C++, knowledge of frameworks like React, Angular, Django, Spring, understanding of algorithms and data structures, experience with version control systems like Git, software architecture, design patterns, and problem-solving skills."
+    - text: "In software development, job roles include 1. Product Manager\n 2. Project Manager\n 3. Quality Assurance (QA) Tester\n 4. User Experience (UX) Designer\n 5. User Interface (UI) Designer\n 6. Technical Writer\n 7. Scrum Master\n 8. Business Analyst\n 9. Systems Analyst\n 10. Product Owner.\n and The required skills are proficiency in programming languages such as Java,\n Python,\n JavaScript,\n C++,\n knowledge of frameworks like React,\n Angular,\n Django,\n Spring,\n understanding of algorithms and data structures, experience with version control systems like Git, software architecture, design patterns, and problem-solving skills."
   utter_ask_about_product_manager:
     - text: "A Product Manager is responsible for defining the features and functionality of a product, prioritizing work, and ensuring alignment with business goals."
   utter_ask_role_responsibilities:
@@ -523,6 +555,46 @@ responses:
     - text: "A Systems Analyst analyzes existing systems within an organization, identifying opportunities for improvement or optimization to meet business needs."
 
   
+
+
+# -=================================================================
+
+  utter_ask_about_flutter_developer:
+    - text: "A Flutter Developer specializes in building cross-platform mobile applications using the Flutter framework and Dart programming language. They create visually appealing and responsive UIs using Flutter's widget system and ensure seamless performance across iOS and Android platforms."
+
+  utter_ask_about_flutter_skills:
+    - text: "To become a Flutter Developer, you need skills in Dart programming, Flutter framework, UI/UX design, API integration, testing, CI/CD, and more. Proficiency in these areas enables you to develop high-quality cross-platform mobile applications."
+
+  utter_ask_about_flutter_tools:
+    - text: "Flutter Developers commonly use tools like Android Studio, IntelliJ IDEA, Visual Studio Code, Flutter Inspector, and Flutter DevTools for development, debugging, and performance optimization."
+
+  utter_ask_about_flutter_framework:
+    - text: "Flutter is an open-source UI software development kit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It offers a rich set of pre-designed widgets, hot reload functionality, and excellent performance."
+
+  utter_ask_about_flutter_projects:
+    - text: "Flutter Developers work on various projects, including but not limited to: mobile applications for businesses, social networking apps, e-commerce platforms, educational apps, games, and utilities. Flutter's versatility allows developers to create apps for diverse industries and purposes."
+
+  utter_ask_about_flutter_performance:
+    - text: "Flutter Developers optimize app performance by utilizing Flutter's built-in features like the hot reload for rapid development, optimizing layout and rendering, minimizing app size, and using efficient widget compositions. They also leverage Flutter DevTools for profiling and debugging performance issues."
+
+  utter_ask_about_flutter_integration:
+    - text: "Flutter Developers integrate APIs into their applications using packages like http and Dio for handling HTTP requests. They parse JSON responses, manage data models, and implement error handling to ensure seamless data exchange between the app and external servers."
+
+  utter_ask_about_flutter_testing:
+    - text: "Flutter Developers write unit tests, widget tests, and integration tests to ensure the reliability and functionality of their applications. They use packages like flutter_test and Mockito for testing UI components, business logic, and API interactions."
+
+  utter_ask_about_flutter_cicd:
+    - text: "Flutter Developers implement CI/CD pipelines to automate the build, testing, and deployment processes of their applications. They use tools like GitHub Actions, Jenkins, or GitLab CI for continuous integration and delivery, ensuring rapid and reliable app releases."
+
+  utter_ask_about_flutter_career:
+    - text: "To start a career as a Flutter Developer, you can begin by learning Dart programming and Flutter framework through online courses, tutorials, and official documentation. As you gain experience, you can explore job opportunities as a Junior Flutter Developer and advance to roles like Senior Developer, Team Lead, or Consultant."
+
+  utter_ask_about_flutter_community:
+    - text: "The Flutter community is vibrant and supportive, with active participation from developers worldwide. You can engage with the community through forums like Stack Overflow, Reddit, and the Flutter Dev Community, attend Flutter meetups, conferences, and workshops, and contribute to open-source projects on GitHub."
+
+  utter_ask_about_flutter_future:
+    - text: "The future of Flutter development looks promising, with continued growth in adoption and expansion into new platforms. Google is investing heavily in Flutter, introducing new features, tools, and improvements regularly. The community-driven ecosystem is also flourishing, providing abundant resources and opportunities for Flutter Developers."
+# ==============================================================
 # --------------------------------------------
   utter_ai_ml:
     - text: "In artificial intelligence and machine learning, job roles encompass Machine Learning Engineer, Data Scientist, AI Researcher, and AI/ML Developer. The required skills include a strong understanding of machine learning algorithms and concepts, proficiency in programming languages like Python, R, experience with libraries and frameworks such as TensorFlow, PyTorch, scikit-learn, data preprocessing, visualization, knowledge of statistics, probability, and understanding of neural networks and deep learning."

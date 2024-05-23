@@ -361,6 +361,7 @@ nlu:
       - What is the role of a Quality Assurance Tester?
       - Explain what a QA Tester does.
       - What are the responsibilities of a QA Tester?
+      - QA Tester?
 
   - intent: ask_qa_tester_skills
     examples: |
@@ -549,12 +550,124 @@ nlu:
       - What are the responsibilities of a Systems Analyst?
 
  # ----------------------END--------------------------
+
+#  ==========================================================================
+
+  - intent: ask_about_flutter_developer
+    examples: |
+      - What does a Flutter Developer do?
+      - Explain the role of a Flutter Developer.
+      - What are the responsibilities of a Flutter Developer?
+      - Can you tell me about the role of a Flutter Developer?
+      - What is a Flutter Developer responsible for?
+      - What skills does a Flutter Developer need?
+      - Tell me more about being a Flutter Developer.
+      - What technologies does a Flutter Developer work with?
+      - What frameworks does a Flutter Developer use?
+      - Describe the job of a Flutter Developer.
+      - FLutter developer?
+      - FLutter development?
+
+  - intent: ask_about_flutter_skills
+    examples: |
+      - What skills are required to be a Flutter Developer?
+      - What should I know to become a Flutter Developer?
+      - List the skills needed for a Flutter Developer.
+      - What competencies are important for a Flutter Developer?
+      - What technical skills does a Flutter Developer need?
+      - What are the essential skills for a Flutter Developer?
+
+  - intent: ask_about_flutter_tools
+    examples: |
+      - What tools do Flutter Developers use?
+      - What development tools are essential for Flutter?
+      - What software should a Flutter Developer be familiar with?
+      - Which tools are important for Flutter development?
+      - What IDEs are commonly used by Flutter Developers?
+
+  - intent: ask_about_flutter_framework
+    examples: |
+      - What is the Flutter framework?
+      - Explain how Flutter works.
+      - What are the features of the Flutter framework?
+      - Why use Flutter for mobile development?
+      - What makes Flutter different from other frameworks?
+
+  - intent: ask_about_flutter_projects
+    examples: |
+      - What types of projects do Flutter Developers work on?
+      - Can you give examples of projects made with Flutter?
+      - What kind of applications can be built with Flutter?
+      - What are some common uses of Flutter in development?
+      - What industries use Flutter for app development?
+
+  - intent: ask_about_flutter_performance
+    examples: |
+      - How do Flutter Developers optimize app performance?
+      - What are some performance tips for Flutter?
+      - How to ensure smooth performance in Flutter apps?
+      - What should be considered for performance in Flutter?
+      - How does Flutter handle app performance?
+
+  - intent: ask_about_flutter_integration
+    examples: |
+      - How do Flutter Developers integrate APIs?
+      - What is the process for integrating REST APIs in Flutter?
+      - How does Flutter handle API integration?
+      - What are best practices for API integration in Flutter?
+      - How to manage data from APIs in Flutter?
+
+  - intent: ask_about_flutter_testing
+    examples: |
+      - How do Flutter Developers test their applications?
+      - What testing frameworks are used in Flutter?
+      - Explain the testing process in Flutter.
+      - How to write tests for Flutter apps?
+      - What types of tests are important in Flutter development?
+
+  - intent: ask_about_flutter_cicd
+    examples: |
+      - How do Flutter Developers use CI/CD?
+      - What are best practices for CI/CD in Flutter?
+      - How to set up CI/CD pipelines for Flutter?
+      - What tools are used for CI/CD in Flutter development?
+      - How does CI/CD improve Flutter app development?
+
+  - intent: ask_about_flutter_career
+    examples: |
+      - How to start a career as a Flutter Developer?
+      - What is the career path for a Flutter Developer?
+      - What opportunities are there for Flutter Developers?
+      - How to advance in a Flutter Developer role?
+      - What does the job market look like for Flutter Developers?
+
+  - intent: ask_about_flutter_community
+    examples: |
+      - What is the Flutter community like?
+      - How can I get involved in the Flutter community?
+      - Are there Flutter meetups or conferences?
+      - What resources are available from the Flutter community?
+      - How to connect with other Flutter Developers?
+
+  - intent: ask_about_flutter_future
+    examples: |
+      - What is the future of Flutter development?
+      - Are there any upcoming features in Flutter?
+      - How is Flutter evolving?
+      - What trends are emerging in Flutter development?
+      - How will Flutter development change in the next few years?
+
+ # -==================================================================
+
+
   # ---------------START--------------------------------------------
   - intent: ai_ml
     examples: |
       - Can you explain job roles in artificial intelligence and machine learning?
       - What skills are needed for a career in machine learning?
       - Describe AI and ML job roles and their required skills.
+      - ai and ml?
+      - ai & ml?
 
   - intent: ask_about_ml_engineer
     examples: |
@@ -623,6 +736,7 @@ nlu:
       - What are the job roles and skills needed in cybersecurity?
       - Explain the role of a cybersecurity analyst.
       - Can you list the skills required for ethical hackers?
+      - cyber security?
 
   - intent: ask_about_security_analyst
     examples: |
@@ -1125,6 +1239,7 @@ nlu:
       - Can you list job roles in embedded systems?
       - What skills are needed for embedded systems engineers?
       - Explain the role of a firmware engineer.
+      - Embedded systems ?
 
   - intent: ask_about_embedded_systems_engineer
     examples: |

@@ -367,6 +367,66 @@ stories:
 
   
   # ---------------END-----------------------------------------------
+  # ======================================================================
+  - story: Flutter Developer Role
+    steps:
+    - intent: ask_about_flutter_developer
+    - action: utter_ask_about_flutter_developer
+
+  - story: Skills Needed for Flutter Developer
+    steps:
+    - intent: ask_about_flutter_skills
+    - action: utter_ask_about_flutter_skills
+
+  - story: Tools Used by Flutter Developers
+    steps:
+    - intent: ask_about_flutter_tools
+    - action: utter_ask_about_flutter_tools
+
+  - story: Introduction to Flutter Framework
+    steps:
+    - intent: ask_about_flutter_framework
+    - action: utter_ask_about_flutter_framework
+
+  - story: Projects of Flutter Developers
+    steps:
+    - intent: ask_about_flutter_projects
+    - action: utter_ask_about_flutter_projects
+
+  - story: Performance Optimization in Flutter
+    steps:
+    - intent: ask_about_flutter_performance
+    - action: utter_ask_about_flutter_performance
+
+  - story: API Integration in Flutter
+    steps:
+    - intent: ask_about_flutter_integration
+    - action: utter_ask_about_flutter_integration
+
+  - story: Testing in Flutter Development
+    steps:
+    - intent: ask_about_flutter_testing
+    - action: utter_ask_about_flutter_testing
+
+  - story: CI/CD in Flutter Development
+    steps:
+    - intent: ask_about_flutter_cicd
+    - action: utter_ask_about_flutter_cicd
+
+  - story: Career Path for Flutter Developers
+    steps:
+    - intent: ask_about_flutter_career
+    - action: utter_ask_about_flutter_career
+
+  - story: Flutter Community Engagement
+    steps:
+    - intent: ask_about_flutter_community
+    - action: utter_ask_about_flutter_community
+
+  - story: Future of Flutter Development
+    steps:
+    - intent: ask_about_flutter_future
+    - action: utter_ask_about_flutter_future
   # -----------START----------------------------------------------
   - story: ai_ml
     steps:
