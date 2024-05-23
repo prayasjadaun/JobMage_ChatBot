@@ -17,9 +17,9 @@
             overflow: hidden;
         }
         .chat-container {
-            width: 90vw;
+            width: 95vw;
             max-width: 450px;
-            height: 85vh;
+            height: 90vh;
             max-height: 700px;
             border: 1px solid #ccc;
             border-radius: 20px;
@@ -108,6 +108,7 @@
             border-radius: 20px;
             margin-right: 10px;
             transition: box-shadow 0.3s ease;
+            font-size: 16px;
         }
         .chat-input:focus {
             box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
@@ -121,10 +122,41 @@
             border-radius: 20px;
             cursor: pointer;
             transition: background 0.3s ease;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .send-btn:hover {
             background: #005bb5;
         }
+        @media (max-width: 600px) {
+            .chat-container {
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+            }
+            .chat-input-container {
+                flex-direction: column;
+                padding: 5px;
+            }
+            .chat-input {
+                margin: 0 0 10px 0;
+            }
+            .send-btn {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+         #chatbot-icon {
+        position: fixed;
+        bottom: 20px; /* Adjust this value to change the vertical position */
+        right: 20px; /* Adjust this value to change the horizontal position */
+        width: 60px; /* Adjust the width of the icon */
+        height: auto;
+        cursor: pointer;
+        z-index: 9999; /* Make sure the icon stays on top of other elements */
+    }
     </style>
 </head>
 <body>
@@ -175,6 +207,7 @@
                 sendMessage();
             }
         });
+        
     </script>
 </body>
 </html>
