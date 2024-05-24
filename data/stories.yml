@@ -959,3 +959,139 @@ stories:
     steps:
       - intent: ask_about_embedded_systems_consultant
       - action: utter_ask_about_embedded_systems_consultant
+# ======================================
+
+  - story: Java Basics Story
+    steps:
+      - intent: ask_about_java_basics
+      - action: utter_java_basics
+
+  - story: Java OOP Story
+    steps:
+      - intent: ask_about_java_oop
+      - action: utter_java_oop
+
+  - story: Java Advanced Story
+    steps:
+      - intent: ask_about_java_advanced
+      - action: utter_java_advanced
+
+  - story: Java Tools Story
+    steps:
+      - intent: ask_about_java_tools
+      - action: utter_java_tools
+
+  - story: Spring Framework Story
+    steps:
+      - intent: ask_about_spring
+      - action: utter_spring
+
+  - story: Python Basics Story
+    steps:
+      - intent: ask_about_python_basics
+      - action: utter_python_basics
+
+  - story: Python OOP Story
+    steps:
+      - intent: ask_about_python_oop
+      - action: utter_python_oop
+
+  - story: Python Advanced Story
+    steps:
+      - intent: ask_about_python_advanced
+      - action: utter_python_advanced
+
+  - story: Python Tools Story
+    steps:
+      - intent: ask_about_python_tools
+      - action: utter_python_tools
+
+  - story: Django Framework Story
+    steps:
+      - intent: ask_about_django
+      - action: utter_django
+
+  - story: JavaScript Basics Story
+    steps:
+      - intent: ask_about_js_basics
+      - action: utter_js_basics
+
+  - story: JavaScript Advanced Story
+    steps:
+      - intent: ask_about_js_advanced
+      - action: utter_js_advanced
+
+  - story: JavaScript Tools Story
+    steps:
+      - intent: ask_about_js_tools
+      - action: utter_js_tools
+
+  - story: React Framework Story
+    steps:
+      - intent: ask_about_react
+      - action: utter_react
+
+  - story: Angular Framework Story
+    steps:
+      - intent: ask_about_angular
+      - action: utter_angular
+
+  - story: C++ Basics Story
+    steps:
+      - intent: ask_about_cpp_basics
+      - action: utter_cpp_basics
+
+  - story: C++ OOP Story
+    steps:
+      - intent: ask_about_cpp_oop
+      - action: utter_cpp_oop
+
+  - story: C++ Advanced Story
+    steps:
+      - intent: ask_about_cpp_advanced
+      - action: utter_cpp_advanced
+
+  - story: C++ Tools Story
+    steps:
+      - intent: ask_about_cpp_tools
+      - action: utter_cpp_tools
+
+  - story: Algorithms Story
+    steps:
+      - intent: ask_about_algorithms
+      - action: utter_algorithms
+
+  - story: Data Structures Story
+    steps:
+      - intent: ask_about_data_structures
+      - action: utter_data_structures
+
+  - story: Git Basics Story
+    steps:
+      - intent: ask_about_git_basics
+      - action: utter_git_basics
+
+  - story: Git Advanced Story
+    steps:
+      - intent: ask_about_git_advanced
+      - action: utter_git_advanced
+
+  - story: Git Platforms Story
+    steps:
+      - intent: ask_about_git_platforms
+      - action: utter_git_platforms
+
+  - story: Software Architecture Story
+    steps:
+      - intent: ask_about_software_architecture
+      - action: utter_software_architecture
+
+  - story: Design Patterns Story
+    steps:
+      - intent: ask_about_design_patterns
+      - action: utter_design_patterns
+
+  - story: Problem Solving Skills Story
+    steps:
+      - intent: ask_about_problem_solving
+      - action: utter_problem_solving

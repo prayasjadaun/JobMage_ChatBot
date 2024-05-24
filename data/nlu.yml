@@ -1302,6 +1302,175 @@ nlu:
       - Explain the responsibilities of an Embedded Systems Consultant.
 
 
+# Different Languages skills set =============================
+
+  - intent: ask_about_java_basics
+    examples: |
+      - Java?
+      - What are the basics of Java?
+      - How do I start learning Java?
+      - Tell me about Java syntax and data types.
+  
+  - intent: ask_about_java_oop
+    examples: |
+      - What are the OOP concepts in Java?
+      - Explain inheritance in Java.
+      - How does polymorphism work in Java?
+  
+  - intent: ask_about_java_advanced
+    examples: |
+      - What is a lambda expression in Java?
+      - How do streams work in Java?
+      - Explain concurrency in Java.
+
+  - intent: ask_about_java_tools
+    examples: |
+      - What IDEs can I use for Java?
+      - Tell me about IntelliJ IDEA.
+      - How do I set up Eclipse for Java?
+
+  - intent: ask_about_spring
+    examples: |
+      - What is Spring framework?
+      - How do I start with Spring Boot?
+      - Explain dependency injection in Spring.
+
+  - intent: ask_about_python_basics
+    examples: |
+      - What are the basics of Python?
+      - How do I start learning Python?
+      - Tell me about Python syntax and data types.
+  
+  - intent: ask_about_python_oop
+    examples: |
+      - What are the OOP concepts in Python?
+      - Explain inheritance in Python.
+      - How does polymorphism work in Python?
+  
+  - intent: ask_about_python_advanced
+    examples: |
+      - What is a decorator in Python?
+      - How do generators work in Python?
+      - Explain exception handling in Python.
+
+  - intent: ask_about_python_tools
+    examples: |
+      - What IDEs can I use for Python?
+      - Tell me about PyCharm.
+      - How do I set up Jupyter Notebook?
+
+  - intent: ask_about_django
+    examples: |
+      - What is Django?
+      - How do I start with Django?
+      - Explain the MVC pattern in Django.
+
+  - intent: ask_about_js_basics
+    examples: |
+      - What are the basics of JavaScript?
+      - How do I start learning JavaScript?
+      - Tell me about JavaScript syntax and data types.
+  
+  - intent: ask_about_js_advanced
+    examples: |
+      - What is a promise in JavaScript?
+      - How do async and await work in JavaScript?
+      - Explain the event loop in JavaScript.
+
+  - intent: ask_about_js_tools
+    examples: |
+      - What IDEs can I use for JavaScript?
+      - Tell me about VSCode.
+      - How do I use Chrome DevTools?
+
+  - intent: ask_about_react
+    examples: |
+      - What is React?
+      - How do I start with React?
+      - Explain hooks in React.
+  
+  - intent: ask_about_angular
+    examples: |
+      - What is Angular?
+      - How do I start with Angular?
+      - Explain services in Angular.
+
+  - intent: ask_about_cpp_basics
+    examples: |
+      - What are the basics of C++?
+      - How do I start learning C++?
+      - Tell me about C++ syntax and data types.
+  
+  - intent: ask_about_cpp_oop
+    examples: |
+      - What are the OOP concepts in C++?
+      - Explain inheritance in C++.
+      - How does polymorphism work in C++?
+  
+  - intent: ask_about_cpp_advanced
+    examples: |
+      - What are templates in C++?
+      - How do pointers work in C++?
+      - Explain the STL in C++.
+
+  - intent: ask_about_cpp_tools
+    examples: |
+      - What IDEs can I use for C++?
+      - Tell me about Visual Studio.
+      - How do I set up CLion?
+
+  - intent: ask_about_algorithms
+    examples: |
+      - What are the basic algorithms I should know?
+      - How do sorting algorithms work?
+      - Explain dynamic programming.
+
+  - intent: ask_about_data_structures
+    examples: |
+      - What are the basic data structures I should know?
+      - How do linked lists work?
+      - Explain hash tables.
+
+  - intent: ask_about_git_basics
+    examples: |
+      - What are the basics of Git?
+      - How do I start using Git?
+      - Explain branching in Git.
+
+  - intent: ask_about_git_advanced
+    examples: |
+      - What is rebasing in Git?
+      - How do I use cherry-picking in Git?
+      - Explain submodules in Git.
+
+  - intent: ask_about_git_platforms
+    examples: |
+      - What is GitHub?
+      - How do I use GitLab?
+      - Explain Bitbucket.
+
+  - intent: ask_about_software_architecture
+    examples: |
+      - What is software architecture?
+      - Explain microservices architecture.
+      - What is serverless architecture?
+
+  - intent: ask_about_design_patterns
+    examples: |
+      - What are design patterns?
+      - Explain the Singleton pattern.
+      - How does the Observer pattern work?
+
+  - intent: ask_about_problem_solving
+    examples: |
+      - How can I improve my problem-solving skills?
+      - What are some good coding challenge websites?
+      - How do I prepare for coding interviews?
+
+
+
+
+
 # Product Manager-Software Development Role------------------
 entities:
 - role

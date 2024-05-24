@@ -208,6 +208,38 @@ intents:
   - ask_about_embedded_systems_project_manager
   - ask_about_embedded_systems_consultant
 
+
+
+# =====================Languages Skills===================
+
+  - ask_about_java_basics
+  - ask_about_java_oop
+  - ask_about_java_advanced
+  - ask_about_java_tools
+  - ask_about_spring
+  - ask_about_python_basics
+  - ask_about_python_oop
+  - ask_about_python_advanced
+  - ask_about_python_tools
+  - ask_about_django
+  - ask_about_js_basics
+  - ask_about_js_advanced
+  - ask_about_js_tools
+  - ask_about_react
+  - ask_about_angular
+  - ask_about_cpp_basics
+  - ask_about_cpp_oop
+  - ask_about_cpp_advanced
+  - ask_about_cpp_tools
+  - ask_about_algorithms
+  - ask_about_data_structures
+  - ask_about_git_basics
+  - ask_about_git_advanced
+  - ask_about_git_platforms
+  - ask_about_software_architecture
+  - ask_about_design_patterns
+  - ask_about_problem_solving
+  
 entities:
   - role
   - responsibilities
@@ -222,6 +254,10 @@ entities:
   - tools_and_techniques
   - skills_development
   - miscellaneous
+
+  - language
+  - framework
+  - concept
 
 
 
@@ -292,6 +328,22 @@ slots:
       - type: from_entity
         entity: miscellaneous
 
+  language:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: language
+  framework:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: framework
+  concept:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: concept
+
   
 
 responses:
@@ -326,7 +378,7 @@ responses:
     - text: "Great, carry on!"
 
   utter_goodbye:
-    - text: "Bye"
+    - text: "Thank you Bye"
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
@@ -337,7 +389,7 @@ responses:
 
 
   utter_software_development:
-    - text: "In software development, job roles include 1. Product Manager\n 2. Project Manager\n 3. Quality Assurance (QA) Tester\n 4. User Experience (UX) Designer\n 5. User Interface (UI) Designer\n 6. Technical Writer\n 7. Scrum Master\n 8. Business Analyst\n 9. Systems Analyst\n 10. Product Owner.\n and The required skills are proficiency in programming languages such as Java,\n Python,\n JavaScript,\n C++,\n knowledge of frameworks like React,\n Angular,\n Django,\n Spring,\n understanding of algorithms and data structures, experience with version control systems like Git, software architecture, design patterns, and problem-solving skills."
+    - text: "In software development, job roles include 1. Product Manager\n 2. Project Manager\n 3. Quality Assurance (QA) Tester\n 4. User Experience (UX) Designer\n 5. User Interface (UI) Designer\n 6. Technical Writer\n 7. Scrum Master\n 8. Business Analyst\n 9. Systems Analyst\n 10. Product Owner.\n and The required skills are proficiency in programming languages such as Java, Python, JavaScript, C++, knowledge of frameworks like React, Angular, Django, Spring, understanding of algorithms and data structures, experience with version control systems like Git, software architecture, design patterns, and problem-solving skills."
   utter_ask_about_product_manager:
     - text: "A Product Manager is responsible for defining the features and functionality of a product, prioritizing work, and ensuring alignment with business goals."
   utter_ask_role_responsibilities:
@@ -931,6 +983,65 @@ responses:
 
 
 
+  utter_java_basics:
+    - text: "To start with Java, you need to understand its syntax, data types, and basic control structures like loops and conditionals."
+  utter_java_oop:
+    - text: "Java supports OOP concepts such as inheritance, polymorphism, encapsulation, and abstraction."
+  utter_java_advanced:
+    - text: "Advanced Java topics include lambda expressions, streams, and concurrency."
+  utter_java_tools:
+    - text: "You can use IDEs like IntelliJ IDEA and Eclipse for Java development."
+  utter_spring:
+    - text: "Spring is a comprehensive framework for Java, offering features like dependency injection and various modules for web development."
+  utter_python_basics:
+    - text: "Python basics include understanding its syntax, data types, and control structures."
+  utter_python_oop:
+    - text: "Python's OOP concepts include classes, inheritance, and polymorphism."
+  utter_python_advanced:
+    - text: "Advanced Python topics include decorators, generators, and exception handling."
+  utter_python_tools:
+    - text: "Popular Python IDEs are PyCharm and Jupyter Notebook."
+  utter_django:
+    - text: "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design."
+  utter_js_basics:
+    - text: "JavaScript basics include understanding its syntax, data types, and DOM manipulation."
+  utter_js_advanced:
+    - text: "Advanced JavaScript topics include ES6+ features, promises, async/await, and the event loop."
+  utter_js_tools:
+    - text: "You can use VSCode and Chrome DevTools for JavaScript development."
+  utter_react:
+    - text: "React is a JavaScript library for building user interfaces, focusing on components and hooks."
+  utter_angular:
+    - text: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript."
+  utter_cpp_basics:
+    - text: "C++ basics include understanding its syntax, data types, and control structures."
+  utter_cpp_oop:
+    - text: "C++ OOP concepts include classes, inheritance, and polymorphism."
+  utter_cpp_advanced:
+    - text: "Advanced C++ topics include templates, STL, and pointers."
+  utter_cpp_tools:
+    - text: "You can use IDEs like Visual Studio and CLion for C++ development."
+  utter_algorithms:
+    - text: "Basic algorithms include sorting, searching, and dynamic programming."
+  utter_data_structures:
+    - text: "Common data structures are arrays, linked lists, stacks, queues, trees, and hash tables."
+  utter_git_basics:
+    - text: "Git basics include repositories, cloning, committing, branching, and merging."
+  utter_git_advanced:
+    - text: "Advanced Git concepts include rebasing, cherry-picking, and submodules."
+  utter_git_platforms:
+    - text: "Popular Git platforms include GitHub, GitLab, and Bitbucket."
+  utter_software_architecture:
+    - text: "Software architecture styles include monolithic, microservices, and serverless."
+  utter_design_patterns:
+    - text: "Common design patterns include Singleton, Factory, Observer, and Strategy."
+  utter_problem_solving:
+    - text: "To improve problem-solving skills, practice coding challenges and participate in coding competitions."
+
+
+
+
+
 actions:
   - utter_ask_role_responsibilities
   - utter_ask_stakeholder_management
@@ -945,6 +1056,35 @@ actions:
   - utter_ask_tools_and_techniques
   - utter_ask_skills_development
   - utter_ask_miscellaneous
+
+
+  - utter_java_basics
+  - utter_java_oop
+  - utter_java_advanced
+  - utter_java_tools
+  - utter_spring
+  - utter_python_basics
+  - utter_python_oop
+  - utter_python_advanced
+  - utter_python_tools
+  - utter_django
+  - utter_js_basics
+  - utter_js_advanced
+  - utter_js_tools
+  - utter_react
+  - utter_angular
+  - utter_cpp_basics
+  - utter_cpp_oop
+  - utter_cpp_advanced
+  - utter_cpp_tools
+  - utter_algorithms
+  - utter_data_structures
+  - utter_git_basics
+  - utter_git_advanced
+  - utter_git_platforms
+  - utter_software_architecture
+  - utter_design_patterns
+  - utter_problem_solving
 
   
 
