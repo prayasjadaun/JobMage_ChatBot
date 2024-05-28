@@ -95,6 +95,8 @@ nlu:
   # -------START------------------------------------
   - intent: software_development
     examples: |
+      - software development?
+      - software developer?
       - What are the typical job roles and skills required in software development?
       - Tell me about software development job roles.
       - What skills are necessary for software engineers?
